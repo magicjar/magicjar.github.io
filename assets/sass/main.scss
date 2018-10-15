@@ -1,0 +1,128 @@
+@import "bootstrap";
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: #494f54;
+}
+
+.navbar {
+    padding-top: 50px;
+    padding-bottom: 0;
+    //background-color: #ffa812;
+
+    .container {
+        position: relative;
+    }
+
+    .navbar-toggler {
+        background-color: white;
+        border-color: transparent;
+        padding: 15px;
+        border-radius: 99999px;
+
+        &:hover {
+            color: rgba(0, 0, 0, .7);
+        }
+    }
+
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        top: 80px;
+        color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        text-align: left;
+        font-size: 1rem;
+        border-radius: 10px;
+        background-color: white;
+
+        ul {
+            padding: 1rem;
+
+            a {
+                padding: .5rem 1rem;
+            }
+        }
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar {
+        .navbar-collapse.show,
+        .navbar-collapse.collapsing {
+            min-width: 300px;
+            left: initial;
+        }
+    }
+}
+
+#about {
+    .photo {
+        min-height: 300px;
+    }
+}
+
+.social-link {
+    font-size: 3rem;
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.social-logo-github {
+    color: #24292e;
+}
+
+.social-logo-facebook {
+    color: #3b5998;
+}
+
+.social-logo-twitter {
+    color: #1da1f2;
+}
+
+.social-logo-instagram {
+    color: #ef4957;
+}
+
+.social-logo-linkedin {
+    color: #0077b5;
+}
+
+#showcase {
+    p {
+        margin-bottom: 30px;
+        padding: 1rem;
+        background-color: #7850c8;
+        color: lightgray;
+    }
+
+    .portfolio-action {
+        color: rgba(0, 0, 0, .5);
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+            color: rgba(0, 0, 0, .7);
+        }
+    }
+}
+
+.navbar-collapse,
+.navbar-toggler,
+.portfolio-action {
+    box-shadow: 0px 0px 10px;
+}
+
+ins {
+    text-decoration: none;
+    background-color: #7850c8;
+    color: white;
+}
