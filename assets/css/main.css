@@ -6333,11 +6333,17 @@ body {
 .social-logo-linkedin {
   color: #0077b5; }
 
+#showcase .row {
+  margin-bottom: 4em; }
+
 #showcase p {
-  margin-bottom: 30px;
-  padding: 1rem;
-  background-color: #7850c8;
-  color: lightgray; }
+  padding: 1rem; }
+
+#showcase .portfolio-image {
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px; }
+  #showcase .portfolio-image:hover {
+    color: rgba(0, 0, 0, 0.7); }
 
 #showcase .portfolio-action {
   color: rgba(0, 0, 0, 0.5);
@@ -6346,12 +6352,21 @@ body {
   #showcase .portfolio-action:hover {
     color: rgba(0, 0, 0, 0.7); }
 
+#about,
+#showcase {
+  margin-bottom: 9em; }
+
 .navbar-collapse,
 .navbar-toggler,
-.portfolio-action {
+.portfolio-action,
+.portfolio-image {
   box-shadow: 0px 0px 10px; }
 
 ins {
   text-decoration: none;
+  background-color: #7850c8;
+  color: white; }
+
+#footer .credit {
   background-color: #7850c8;
   color: white; }
