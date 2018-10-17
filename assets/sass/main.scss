@@ -6,7 +6,7 @@ body {
 }
 
 p {
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .navbar {
@@ -131,7 +131,8 @@ p {
 }
 
 #about,
-#showcase {
+#showcase,
+.navbar {
     margin-bottom: 9em;
 }
 
