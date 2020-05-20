@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     color: #494f54;
@@ -131,12 +135,6 @@ p {
     }
 }
 
-#about,
-#showcase,
-.navbar {
-    margin-bottom: 9em;
-}
-
 .navbar-collapse,
 .navbar-toggler,
 .portfolio-action,
@@ -238,4 +236,126 @@ ins {
     color: #fff;
     text-decoration: none;
     background-color: #2c3e50;
+}
+
+/**
+**
+** CV Style Section
+**
+**/
+
+#cv {
+    background-color: #f1f1f1;
+
+    .bg-resume {
+        background-color: #7850c8 !important;
+    }
+
+    .cv-card {
+        padding: 2rem;
+        margin-top: 2rem;
+        border-radius: 0;
+
+        .card-header {
+            padding: 0;
+            margin-bottom: 2rem;
+            border: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        td {
+            padding: .3rem 1.5rem;
+        }
+
+        .progress {
+            height: .5rem;
+        }
+    }
+
+    .cv-info {
+        background-color: rgb(59, 59, 59);
+
+        .photo {
+            z-index: 1;
+        }
+    }
+
+    .cv-details {
+        background-color: #efefef;
+
+        h2 {
+            text-decoration: underline;
+        }
+    }
+
+    .cv-skills {
+        background-color: #7850c8;
+        color: #efefef;
+        border-radius: 0em 0em 3em 3em;
+        top: -3em;
+        z-index: 0;
+    }
+
+    hr {
+        margin: 1.5rem 0;
+    }
+
+    .navigation {
+        position: absolute;
+        right: -4rem;
+        width: 4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .edu-year {
+        float: right;
+        background: lightgreen;
+        height: 2rem;
+        width: 100%;
+        position: relative;
+        background-color: #dee2e6;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -1rem;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 1rem solid #dee2e6;
+            border-top: 1rem solid transparent;
+            border-bottom: 1rem solid transparent;
+        }
+
+        &::after {
+            content: '\2022';
+            position: absolute;
+            top: 4px;
+            right: -4px;
+            color: white;
+        }
+    }
+
+    .print {
+        visibility: hidden;
+        display: none;
+    }
+
+    @media print {
+        .no-print {
+            visibility: hidden;
+            display: none;
+        }
+
+        .print {
+            visibility: visible;
+            display: inherit;
+        }
+    }
 }
