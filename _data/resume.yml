@@ -1,0 +1,186 @@
+# Resume datas
+name: Fajar Setya Budi
+greetings: Hello, I'm Fajar!
+introduction: >-
+  A creative and dynamic game developer with 3 years of experiences in making games. I am excellent in working with team or solo to achieve targets on time and capable of turning your imagination into a playable game.
+picture: /assets/images/user.png
+occupation: Game Developer
+last_update: 21 May 2020
+
+personalinfo:
+  show: true
+  lists:
+  - title: Full Name
+    value: Fajar Setya Budi
+  - title: Birth
+    value: 23 Oct 1993
+  - title: Address
+    value: Jl. Margorukun II, Krapyak RT05/RW17, Sidoarum, Godean
+  - title: E-mail
+    value: fajarsetya@live.com
+  - title: Phone
+    value: +62 896 1386 6384
+  - title: Homepage
+    value:
+
+skills:
+  show: true
+  lists:
+  - softskill:
+    - name: Active Listening
+      icon: assets/icons/006-hearing.svg
+    - name: Adaptability
+      icon: assets/icons/007-equalizer.svg
+    - name: Critical Thinking
+      icon: assets/icons/008-creative-idea.svg
+    - name: Problem Solving
+      icon: assets/icons/009-jigsaw.svg
+    - name: Teamwork
+      icon: assets/icons/010-united.svg
+  - languageskill:
+    - lang: Indonesian
+      stats: Native
+    - lang: English
+      stats: Intermediate
+  - hardskill:
+    - category: Game Engine
+      skill:
+      - name: Unity
+        stats: 90
+      - name: Unreal Engine 4
+        stats: 30
+      - name: GameMaker Studio
+        stats: 20
+    - category: Coding
+      skill:
+      - name: C#
+        stats: 80
+      - name: HTML
+        stats: 90
+      - name: CSS
+        stats: 85
+      - name: JS
+        stats: 65
+      - name: PHP
+        stats: 60
+    - category: Others
+      skill:
+      - name: GIT
+        stats: 70
+      - name: Photoshop
+        stats: 80
+      - name: blender
+        stats: 60
+      - name: MS Word
+        stats: 95
+      - name: MS PowerPoint
+        stats: 80
+      - name: MS Excel
+        stats: 55
+
+experience:
+  show: true
+  lists:
+  - job: Solo Game Developer
+    active: 2017 - Now
+    company:
+    - name: Storming Area 15
+      job_description: >-
+        Play as an alien who want to rescue their friends from humans.
+        They are locked up in the most secure facility on the earth, the Area 15.
+        It is well known as the center of extraterrestrials research and weapon experiments on earth.
+    - name: Underdwellers
+      job_description: >-
+        A young boy named Malik hears a strange noise he never heard before.
+        As he tries to find what causes the noise, he has to pass the obstacles and fight creatures from the sewer.
+
+education:
+  show: true
+  lists:
+  - institution: STMIK "AMIKOM" Yogyakarta
+    active: 2012 - 2016
+    degree: Bachelor's Degree (S.Kom)
+    major: in Information Technology
+  - institution: SMA N 1 Sedayu
+    active: 2009 - 2011
+    degree: Senior High School
+    major: IPA
+  - institution: SMP N 3 Godean
+    active: 2006 - 2009
+    degree: Junior High School
+    major:
+  - institution: SD N Sidoarum
+    active: 2000 - 2009
+    degree: Elementary School
+    major: 
+
+portfolio:
+  show: true
+  limit: 3
+
+reference:
+  show: false
+  lists:
+  - name: Someone Important
+    photo: /assets/images/user.png
+    occupation: Big Boss
+    contact: +1 223 1243
+  - name: Someone Important 2
+    photo: /assets/images/user.png
+    occupation: Big Boss Assistant
+    contact:  +1 223 1244
+
+publication:
+  show: false
+  lists:
+    title:
+    authors:
+    - name:
+    short_description:
+    release_date:
+    link:
+
+event:
+  show: false
+  lists:
+  - name:
+    date:
+    role:
+    orgarizer:
+
+award-certificate:
+  show: false
+  lists:
+  - title:
+    authority:
+    description:
+
+interest:
+  show: true
+  lists:
+  - name: Open Source
+    icon: assets/icons/012-open-source.svg
+  - name: Startup
+    icon: assets/icons/013-startup.svg
+  - name: Business
+    icon: assets/icons/022-data.svg
+  - name: Gaming
+    icon: assets/icons/014-game-controller.svg
+  - name: Movie
+    icon: assets/icons/015-popcorn.svg
+  - name: Science Fiction
+    icon: assets/icons/016-space-ship.svg
+  - name: Bloging
+    icon: assets/icons/019-bloging.svg
+  - name: Coffee
+    icon: assets/icons/018-coffee.svg
+
+blog:
+  show: true
+  limit: 3
+
+contact:
+  show: true
+  message: Feel free to reach me.
+  email: fajarsetya@live.com
+  show_social_media: true

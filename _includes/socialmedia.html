@@ -1,0 +1,11 @@
+<ul class="list-inline mb-0" style="font-size: 2rem;">
+    {%- for social in site.data.socialmedia.social_media -%}
+    <li class="list-inline-item">
+        <a title="{{ social.name }}" href="{{ social.url }}" target="_blank" rel="nofollow"><i
+                class="social-logo {{ social.icon }} text-decoration-none"
+                style="color:{{ social.color_id | default: #000000 }}"></i></a>
+        <p class="print">{{ social.url }}</p>
+        <span class="sr-only">{{ social.name }}</span>
+    </li>
+    {%- endfor -%}
+</ul>

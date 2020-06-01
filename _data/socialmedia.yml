@@ -1,0 +1,26 @@
+# Social media
+social_media:
+  - url: https://dawntale.github.com
+    name: Github
+    icon: social-logo-github
+    color_id: "#24292e"
+  - url: https://twitter.com/thedawntale
+    name: Twitter
+    icon: social-logo-twitter
+    color_id: "#1da1f2"
+  - url: https://linkedin.com/in/fajarsetya
+    name: LinkedIn
+    icon: social-logo-linkedin
+    color_id: "#0077b5"
+  - url: https://facebook.com/
+    name: Facebook
+    icon: social-logo-facebook
+    color_id: "#3b5998"
+  - url: https://instagram.com/
+    name: Instagram
+    icon: social-logo-instagram
+    color_id: "#ef4957"
+  - url: mailto:fajarsetya@live.com
+    name: E-mail
+    icon: social-logo-mail
+    color_id: "#24292e"

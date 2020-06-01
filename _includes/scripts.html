@@ -1,0 +1,32 @@
+<!-- jQuery -->
+<script src="{{ '/assets/js/jquery.min.js' | relative_url  }}"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+<!-- Bootstrap -->
+<script src="{{ '/assets/js/bootstrap.min.js' }}"></script>
+
+<!-- Custom Script -->
+<script>
+    $(document).on('click', 'a[href]', function (e) {
+        var href = $(this).attr('href');
+
+        if (!href.includes('#')) {
+            return;
+        }
+
+        var id = '#' + href.split('#').pop();
+        var $id = $(id);
+
+        if ($id.length === 0) {
+            return;
+        }
+
+        e.preventDefault();
+
+        var pos = $id.offset().top;
+
+        $('body, html').animate({ scrollTop: pos }, 600);
+    });
+    
+    $('#markdown-toc').appendTo('#toc');
+</script>

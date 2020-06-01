@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<!-- +++++ Hero +++++ -->
+<div id="main">
+
+  {%- include navigation.html -%}
+
+  <article class="post h-entry container" itemscope itemtype="http://schema.org/BlogPosting">
+  
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta mb-0">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card mr-2" itemprop="name">
+           {{ page.author }}</span></span>
+        {%- endif -%}
+        {%- if page.tags.size > 0 -%}
+        • <span class="p-category">
+          {%- for tag in page.tags -%}
+          <span class="badge badge-secondary mr-2">{{ tag }}</span>
+          {%- endfor -%}
+        </span>
+        {%- endif -%}
+      </p>
+    </header>
+  
+    <div class="post-content e-content row " itemprop="articleBody">
+      <div class="post-toc col-lg-4 mt-4">
+        <div class="sticky-top py-4">
+          {%- include toc.html -%}
+        </div>
+      </div>
+      <div class="col-lg-8 mt-lg-4 pt-4" style="margin-bottom: 2rem;">
+        {{ content }}
+      </div>
+
+      {%- if page.categories -%}
+        {%- assign category = page.categories[0] -%}
+        {%- assign posts = site.categories[category] -%}
+        {%- for post in posts -%}
+          {%- if post.url == page.url -%}
+            {%- assign post_index0 = forloop.index0 -%}
+            {%- assign post_index1 = forloop.index -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for post in posts -%}
+          {%- if post_index0 == forloop.index -%}
+            {%- assign next_post = post -%}
+          {%- endif -%}
+          {%- if post_index1 == forloop.index0 -%}
+            {%- assign prev_post = post -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      <div class="col-sm-6 text-center" style="margin-bottom: 2rem;">
+        {%- if prev_post -%}
+        <div class="card p-3 d-block rounded-0">
+          <a class="btn btn-lg btn-block border rounded-pill mb-3" href="{{ prev_post.url }}">< Previous Post</a><a class="ml-4" href="{{ prev_post.url }}">{{ prev_post.title }}</a>
+        </div>
+        {%- endif -%}
+      </div>
+      <div class="col-sm-6 text-center" style="margin-bottom: 2rem;">
+        {%- if next_post -%}
+        <div class="card p-3 d-block rounded-0">
+          <a class="btn btn-lg btn-block border rounded-pill mb-3" href="{{ next_post.url }}">Next Post ></a><a class="mr-4" href="{{ next_post.url }}">{{ next_post.title }}</a>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if site.disqus.shortname -%}
+    {%- include comment.html -%}
+    {%- endif -%}
+  
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+</div>
