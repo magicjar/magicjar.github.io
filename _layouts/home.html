@@ -8,7 +8,7 @@ layout: default
   {%- include navigation.html -%}
 
   <!-- +++++ Welcome Section +++++ -->
-  <header class="container my-auto py-5" id="about">
+  <header class="container my-auto" id="about">
     <div class="row text-center text-lg-left my-auto">
       <div class="col-lg-4 photo d-flex align-items-center text-center">
         <div class="col-12 text-center">
@@ -26,7 +26,7 @@ layout: default
 <!-- +++++ Blog +++++ -->
 {%- if site.posts.size > 0 and site.show_blog -%}
 
-<div id="blog" class="h-100 d-flex flex-column position-relative">
+<div id="blog" class="min-vh-100 d-flex flex-column position-relative">
   {%- if site.show_blog -%}
   <div class="cta-button">
     <a href="#blog" class="btn btn-lg bg-white text-dark">BLOG</a>
