@@ -21,7 +21,7 @@ personalinfo:
   - title: Phone
     value: +62 896 1386 6384
   - title: Homepage
-    value:
+    value: dawntale.github.io
 
 skills:
   show: true
@@ -101,18 +101,18 @@ education:
     active: 2012 - 2016
     degree: Bachelor's Degree (S.Kom)
     major: in Information Technology
-  - institution: SMA N 1 Sedayu
-    active: 2009 - 2011
-    degree: Senior High School
-    major: IPA
-  - institution: SMP N 3 Godean
-    active: 2006 - 2009
-    degree: Junior High School
-    major:
-  - institution: SD N Sidoarum
-    active: 2000 - 2009
-    degree: Elementary School
-    major: 
+  # - institution: SMA N 1 Sedayu
+  #   active: 2009 - 2011
+  #   degree: Senior High School
+  #   major: IPA
+  # - institution: SMP N 3 Godean
+  #   active: 2006 - 2009
+  #   degree: Junior High School
+  #   major:
+  # - institution: SD N Sidoarum
+  #   active: 2000 - 2009
+  #   degree: Elementary School
+  #   major: 
 
 portfolio:
   show: true

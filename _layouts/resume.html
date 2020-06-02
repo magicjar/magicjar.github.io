@@ -12,13 +12,18 @@ layout: default
                 <div class="sticky-top" style="padding-top: 2rem;">
                     <div class="card text-center" style="border-radius: 0;">
                         <div class="bg-purple text-white p-4">
-                            <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="Stanley" height="200"
-                                width="200">
-                            <h1 class="h4 card-title mt-4">{{ site.data.resume.name }}</h1>
-                            <p class="card-text">{{ site.data.resume.occupation }}</p>
-                            
-                            {%- include socialmedia.html -%}
-
+                            <div class="row">
+                                <div class="col-4 col-lg-12">
+                                    <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="Stanley" height="200"
+                                        width="200">
+                                </div>
+                                <div class="col-7 col-lg-12">
+                                    <h1 class="h4 card-title mt-4">{{ site.data.resume.name }}</h1>
+                                    <p class="card-text">{{ site.data.resume.occupation }}</p>
+                                    
+                                    {%- include socialmedia.html -%}
+                                </div>
+                            </div>
                         </div>
                         <div class="card-footer text-muted no-print p-4">
                             <button class="btn bg-purple text-white btn-block rounded-pill text-uppercase"
@@ -159,9 +164,9 @@ layout: default
                                 <h3 class="h5 mb-4">soft skill</h3>
                                 <ul class="list-inline mb-0">
                                     {%- for softskill in site.data.resume.skills.lists[0].softskill -%}
-                                    <li class="list-inline-item mb-3 mr-3">
-                                        <img src="{{ softskill.icon | relative_url }}" alt="{{ softskill.name }}" height="35"
-                                            width="35">
+                                    <li class="list-inline-item mb-2 mr-3">
+                                        <img src="{{ softskill.icon | relative_url }}" alt="{{ softskill.name }}" height="30"
+                                            width="30">
                                         {{ softskill.name }}
                                         <span class="sr-only">{{ softskill.name }}</span>
                                     </li>
@@ -190,7 +195,7 @@ layout: default
                             {%- for skill in hardskill.skill -%}
                             <div class="col-6">
                                 {{ skill.name }}<span class="print float-right">{{ skill.stats }}/100</span>
-                                <div class="progress mb-2">
+                                <div class="progress mb-2 no-print">
                                     <div class="progress-bar progress-bar-theme bg-purple" role="progressbar"
                                         aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats }}%;">
                                         <span class="sr-only">{{ skill.stats }}/100</span>
@@ -291,9 +296,7 @@ layout: default
                         <a href="{{ '/portfolios' | relative_url }}" target="_blank"
                             class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
-                            See More
-                            <br>
-                            {{ '/portfolios' | absolute_url }}
+                            See More : {{ '/portfolios' | absolute_url }}
                         </p>
                     </div>
                 </div>
@@ -342,8 +345,8 @@ layout: default
                     <div class="card-body">
                         <ul class="list-inline mb-0">
                             {%- for interest in site.data.resume.interest.lists -%}
-                            <li class="list-inline-item mb-3 mr-3">
-                                <img src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}" height="35" width="35">
+                            <li class="list-inline-item mb-2 mr-3">
+                                <img src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}" height="30" width="30">
                                 {{ interest.name }}
                                 <span class="sr-only">{{ interest.name }}</span>
                             </li>
@@ -368,16 +371,14 @@ layout: default
                     <div class="card-footer text-muted px-0 pt-4 pb-0 mt-4">
                         <a href="{{ '/blog' | relative_url }}" class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
-                            See More
-                            <br>
-                            {{ '/blog' | absolute_url }}
+                            See More : {{ '/blog' | absolute_url }}
                         </p>
                     </div>
                 </div>
                 {%- endif -%}
 
                 {%- if site.data.resume.contact.show -%}
-                <div class="card cv-card" id="contact">
+                <div class="card cv-card no-print" id="contact">
                     <div class="card-header">
                         <h2 class="h4 font-weight-bold text-uppercase">Contact</h2>
                     </div>
