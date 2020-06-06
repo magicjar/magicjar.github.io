@@ -62,6 +62,10 @@ pre {
     padding: 0 0 4rem;
 }
 
+.cv-content {
+    padding-right: calc(4rem + 15px);
+}
+
 .post {
     p {
         margin-bottom: 2rem;
@@ -112,7 +116,24 @@ blockquote {
     border-radius: .5rem;
 }
 
+
 @media print {
+    #cv {
+        .cv-card {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+
+            .card-header {
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+
+    .cv-content {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     .no-print {
         visibility: hidden;
         display: none;
@@ -121,6 +142,14 @@ blockquote {
     .print {
         visibility: visible;
         display: inherit;
+    }
+
+    @media (min-width: 576px) {
+        #portfolio {
+            .card-columns {
+                column-count: 4 !important;
+            }
+        }
     }
 }
 
