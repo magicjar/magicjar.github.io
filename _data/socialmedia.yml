@@ -20,7 +20,7 @@ social_media:
     name: LinkedIn
     icon: social-logo-linkedin
     color_id: "#0077b5"
-  # - url: mailto:fajarsetya@live.com
-  #   name: E-mail
-  #   icon: social-logo-mail
-  #   color_id: "#24292e"
+  - url: mailto:fajarsetya@live.com
+    name: E-mail
+    icon: social-logo-mail
+    color_id: "#24292e"
