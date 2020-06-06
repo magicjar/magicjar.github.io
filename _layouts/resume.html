@@ -194,7 +194,7 @@ layout: default
                             <h4 class="h6 col-12 mt-4"><strong>{{ hardskill.category }}</strong></h4>
                             {%- for skill in hardskill.skill -%}
                             <div class="col-6">
-                                {{ skill.name }}<span class="print float-right">{{ skill.stats }}/100</span>
+                                <p class="mb-0">{{ skill.name }}<span class="print float-right">{{ skill.stats }}/100</span></p>
                                 <div class="progress mb-2 no-print">
                                     <div class="progress-bar progress-bar-theme bg-purple" role="progressbar"
                                         aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats }}%;">
@@ -296,7 +296,7 @@ layout: default
                         <a href="{{ '/portfolios' | relative_url }}" target="_blank"
                             class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
-                            See More : {{ '/portfolios' | absolute_url }}
+                            See More : {{ '/portfolios' | relative_url }}
                         </p>
                     </div>
                 </div>
@@ -371,7 +371,7 @@ layout: default
                     <div class="card-footer text-muted px-0 pt-4 pb-0 mt-4">
                         <a href="{{ '/blog' | relative_url }}" class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
-                            See More : {{ '/blog' | absolute_url }}
+                            See More : {{ '/blog' | relative_url }}
                         </p>
                     </div>
                 </div>
