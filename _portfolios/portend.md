@@ -11,7 +11,7 @@ tags: php vue html
 icon_image:
 featured_image: /assets/images/portfolios/portend.png
 
-github_link: https://github.com/dawntale/portend
+github_link: https://github.com/magicjar/portend
 download_link:
 ---
 A simple portfolio dashboard build with Laravel and Vue JS.
