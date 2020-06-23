@@ -10,7 +10,6 @@
 
         <div class="collapse navbar-collapse" id="navbarNav" style="z-index: 2020;">
             <ul class="navbar-nav ml-auto">
-
                 {% for item in site.data.navigation.main-nav %}
                 
                 <li class="nav-item">
@@ -18,6 +17,14 @@
                 </li>
 
                 {% endfor %}
+
+                <div class="dropdown-divider"></div>
+
+                <strong>Dark Mode</strong>
+                <div class="custom-control custom-switch">
+                    <input id="dark-mode-toggle" type="checkbox" class="custom-control-input">
+                    <label class="custom-control-label" for="dark-mode-toggle"></label>
+                </div>
             </ul>
         </div>
         <!--/.nav-collapse -->

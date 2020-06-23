@@ -1,6 +1,6 @@
 // Required
 @import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
 // Optional
@@ -17,7 +17,7 @@
 @import "../node_modules/bootstrap/scss/dropdown";
 // @import "../node_modules/bootstrap/scss/button-group";
 // @import "../node_modules/bootstrap/scss/input-group";
-// @import "../node_modules/bootstrap/scss/custom-forms";
+@import "../node_modules/bootstrap/scss/custom-forms";
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/navbar";
 @import "../node_modules/bootstrap/scss/card";
@@ -189,7 +189,13 @@ blockquote {
         background-color: white;
 
         ul {
-            padding: 1rem;
+            text-align: center;
+            padding: .5rem 0rem;
+
+            .custom-control {
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
 
             a {
                 padding: .5rem 1rem;
@@ -433,7 +439,8 @@ blockquote {
     background-color: #4F5D95;
 }
 
-.lang-js {
+.lang-js,
+.lang-javascript {
     color: rgb(59, 59, 59);;
     background-color: #f1e05a;
 }

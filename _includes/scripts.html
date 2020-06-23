@@ -1,25 +1,37 @@
-<!-- jQuery -->
+{% if jekyll.environment == "production" %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+{% else %}
 <script src="{{ '/assets/js/jquery.min.js' | relative_url  }}"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
-<!-- Bootstrap -->
-<script src="{{ '/assets/js/bootstrap.min.js' }}"></script>
+<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+{% endif %}
 
 <!-- Custom Script -->
 <script>
-    $(document).on('click', 'a[href]', function (e) {
+    $(document).ready( function() {
+        var data = localStorage.darkMode;
+
+        $("body").attr("dark-mode", data);
+
+        $('#dark-mode-toggle')
+        .prop('checked', data == 'true')
+        .change(function () {
+            data = $(this).prop('checked');
+            localStorage.darkMode = data;
+            $("body").attr("dark-mode", data);
+        });
+
+        $('#markdown-toc').appendTo('#toc');
+    })
+    .on('click', 'a[href]', function (e) {
         var href = $(this).attr('href');
 
-        if (!href.includes('#')) {
-            return;
-        }
+        if (!href.includes('#')) return;
 
         var id = '#' + href.split('#').pop();
         var $id = $(id);
 
-        if ($id.length === 0) {
-            return;
-        }
+        if ($id.length === 0) return;
 
         e.preventDefault();
 
@@ -27,6 +39,4 @@
 
         $('body, html').animate({ scrollTop: pos }, 600);
     });
-    
-    $('#markdown-toc').appendTo('#toc');
 </script>
