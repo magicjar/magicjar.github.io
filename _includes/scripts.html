@@ -8,12 +8,12 @@
 
 <!-- Custom Script -->
 <script>
-    $(document).ready( function() {
-        var data = localStorage.darkMode;
+    "use strict";
 
-        $("body").attr("dark-mode", data);
+    var data = localStorage.darkMode;
+    $("body").attr("dark-mode", data);
 
-        $('#dark-mode-toggle')
+    $('#dark-mode-toggle')
         .prop('checked', data == 'true')
         .change(function () {
             data = $(this).prop('checked');
@@ -21,9 +21,9 @@
             $("body").attr("dark-mode", data);
         });
 
-        $('#markdown-toc').appendTo('#toc');
-    })
-    .on('click', 'a[href]', function (e) {
+    $('#markdown-toc').appendTo('#toc');
+    
+    $(document).on('click', 'a[href]', function (e) {
         var href = $(this).attr('href');
 
         if (!href.includes('#')) return;

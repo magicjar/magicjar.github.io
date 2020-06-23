@@ -39,13 +39,77 @@
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/print";
 
-html, body {
-    height: 100%;
-}
+// Light Mode Variable
+$main-background-light: inherit;
+$main-color-light: #494f54;
+$blockquote-bg-light: #d5d0de;
+$card-bg-light: rgba(255,255,255,.05);
+$hero-gradient-bg-light: linear-gradient(45deg, #705bce, #c3639b);
+
+// Dark Mode Variable
+$main-background-dark: #141516;
+$main-color-dark: #a2aabd;
+$blockquote-bg-dark: #2c3238;
+$card-bg-dark: $card-bg-light;
+$hero-gradient-bg-dark: linear-gradient(45deg, #101829, #351a1a);
+
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    color: #494f54;
+    color: $main-color-light;
+    background-color: $main-background-light;
+
+    blockquote {
+        border-left: 5px solid #6a4da9;
+        background: $blockquote-bg-light;
+    }
+
+    .card {
+        background-color: $card-bg-light;
+    }
+
+    #hero {
+        background: $hero-gradient-bg-light;
+    }
+
+    .cta-button {
+        >.btn {
+            background-color: $main-background-light;
+            color: $main-color-light;
+        }
+    }
+}
+
+body[dark-mode=true] {
+    color: $main-color-dark;
+    background-color: $main-background-dark;
+
+    blockquote {
+        background: $blockquote-bg-dark;
+    }
+
+    .card {
+        background-color: $card-bg-dark;
+    }
+
+    #hero {
+        background: $hero-gradient-bg-dark;
+    }
+
+    .cta-button {
+        >.btn {
+            background-color: $main-background-dark;
+            color: $main-color-dark;
+        }
+    }
+
+    .portfolio-action {
+        color: $main-background-dark !important;
+        background-color: $main-color-dark;
+    }
+}
+
+html, body {
+    height: 100%;
 }
 
 pre {
@@ -110,9 +174,7 @@ pre {
 }
 
 blockquote {
-    border-left: 5px solid #7850c8;
     padding: 1.5rem 2rem .1rem 2rem;
-    background: #e3d6fd;
     border-radius: .5rem;
 }
 
@@ -123,7 +185,7 @@ blockquote {
             margin-top: 1rem !important;
             margin-bottom: 1rem !important;
 
-            .card-header {
+            h2 {
                 margin-bottom: 1rem !important;
             }
         }
@@ -226,6 +288,7 @@ blockquote {
 
 // Start CV
 #cv {
+    color: $main-color-light;
     background-color: #f1f1f1;
 
     .cv-card {
@@ -234,7 +297,7 @@ blockquote {
         margin-bottom: 2rem;
         border-radius: 0;
 
-        .card-header {
+        h2 {
             padding: 0;
             margin-bottom: 2rem;
             border: 0;
@@ -381,7 +444,6 @@ blockquote {
 
     .portfolio-action {
         color: rgba(0, 0, 0, .3);
-        background-color: transparent;
         border-color: transparent;
 
         &:hover {
