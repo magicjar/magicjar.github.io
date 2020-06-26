@@ -4,7 +4,7 @@
 
 layout: home
 ---
-# Fajar Setya
+## Fajar Setya
 ### game developer
 <br/>
 <br/>
