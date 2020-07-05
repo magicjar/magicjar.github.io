@@ -9,7 +9,7 @@ categories: web
 tags: typescript javascript
 
 icon_image:
-featured_image: 
+featured_image: /assets/images/portfolios/nusantara-valid.png
 
 github_link: https://github.com/magicjar/nusantara-valid
 download_link:
