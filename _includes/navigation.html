@@ -1,25 +1,21 @@
 <!-- +++++ Navbar +++++ -->
 <nav class="navbar navbar-light no-print">
     <div class="container">
-        <a class="navbar-brand text-light" href="/">{{ site.title }}</ins> <span
-                class="sr-only">(current)</span></a>
+        <a class="navbar-brand text-light" href="/">{{ site.title }}</ins>
+            <span class="sr-only">(current)</span>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav" style="z-index: 2020;">
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.navigation.main-nav %}
-                
                 <li class="nav-item">
                     <a class="nav-link" href="{{ item.url }}">{{ item.page }}</a>
                 </li>
-
                 {% endfor %}
-
                 <div class="dropdown-divider"></div>
-
                 <strong>Dark Mode</strong>
                 <div class="custom-control custom-switch">
                     <input id="dark-mode-toggle" type="checkbox" class="custom-control-input">

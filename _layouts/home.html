@@ -27,12 +27,6 @@ layout: default
 {%- if site.posts.size > 0 and site.show_blog -%}
 
 <div id="blog" class="min-vh-100 d-flex flex-column position-relative">
-  {%- if site.show_blog -%}
-  <div class="cta-button">
-    <a href="#blog" class="btn btn-lg">BLOG</a>
-  </div>
-  {%- endif -%}
-
   <div class="container my-auto py-5">
     <h2 class="mb-5 text-center">{{ page.list_title | default: "Blog" }}</h2>
     <div class="card-columns">

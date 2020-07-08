@@ -72,13 +72,6 @@ body {
     #hero {
         background: $hero-gradient-bg-light;
     }
-
-    .cta-button {
-        >.btn {
-            background-color: $main-background-light;
-            color: $main-color-light;
-        }
-    }
 }
 
 body[dark-mode=true] {
@@ -95,13 +88,6 @@ body[dark-mode=true] {
 
     #hero {
         background: $hero-gradient-bg-dark;
-    }
-
-    .cta-button {
-        >.btn {
-            background-color: $main-background-dark;
-            color: $main-color-dark;
-        }
     }
 
     .portfolio-action {
@@ -138,35 +124,11 @@ pre {
     }
 }
 
-.cta-button {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: -70px;
-
-    >.btn {
-        border-top-left-radius: 50rem;
-        border-top-right-radius: 50rem;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        padding: 1.5rem 2rem 1rem;
-    }
-}
-
-.print {
-    visibility: hidden;
-    display: none;
-}
-
 #tableofcontent,
 #markdown-toc {
     ul {
         padding-left: 1.75rem;
     }
-}
-
-.bg-purple {
-    background-color: #7850c8 !important;
 }
 
 .gradient-thumbnail {
@@ -180,6 +142,10 @@ blockquote {
     border-radius: .5rem;
 }
 
+.print {
+    visibility: hidden;
+    display: none;
+}
 
 @media print {
     #cv {
@@ -425,38 +391,27 @@ blockquote {
     }
 
     p {
-        padding: 1rem;
+        margin-bottom: 1.25rem;
+        padding: 0;
     }
 
-    article {
-        p {
-            margin-bottom: 1.25rem;
-            padding: 0;
-        }
-    }
-
+    .portfolio-action,
     .portfolio-image {
-        color: rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
-
-        &:hover {
-            color: rgba(0, 0, 0, 0.5);
-        }
-    }
-
-    .portfolio-action {
+        box-shadow: 0px 0px 10px;
         color: rgba(0, 0, 0, .3);
-        border-color: transparent;
 
         &:hover {
             color: rgba(0, 0, 0, .5);
         }
     }
-}
 
-.portfolio-action,
-.portfolio-image {
-    box-shadow: 0px 0px 10px;
+    .portfolio-image {
+        border-radius: 10px;
+    }
+
+    .portfolio-action {
+        border-color: transparent;
+    }
 }
 
 .lang-csharp {
