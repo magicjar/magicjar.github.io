@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://magicjar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 copyright: "Copyright &copy; 2020 | FJRSTY."
 date_format: "%-d %b %Y"
-lang: #en-US
+lang: id
 
 # Analytics setting
 google_analytics_id:
