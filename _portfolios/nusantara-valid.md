@@ -2,12 +2,12 @@
 title: "Nusantara Valid"
 subtitle: "Data Validator"
 release_date: 2020-06-29 17:26:14 +0700
-show_on_resume: false
+show_on_resume: true
 
 categories: web
 tags: typescript javascript
 
-icon_image:
+icon_image: /assets/images/portfolios/nusantara-valid-logo.svg
 featured_image: /assets/images/portfolios/nusantara-valid.png
 
 github_link: https://github.com/magicjar/nusantara-valid
