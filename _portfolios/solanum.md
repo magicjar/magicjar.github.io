@@ -10,7 +10,14 @@ tags: css html php js
 icon_image:
 featured_image: /assets/images/portfolios/solanum.png
 
-github_link: https://github.com/magicjar/solanum
-download_link: https://github.com/magicjar/solanum/releases
+links: [{
+    title: Github Repo,
+    icon: social-logo-github,
+    link: https://github.com/magicjar/solanum
+}, {
+    title: Download,
+    icon: ,
+    link: https://github.com/magicjar/solanum/releases
+}]
 ---
 Solanum lets you build any kind of website from a personal blog, travel, food, to portfolio website for showcasing your works.

@@ -18,8 +18,7 @@ layout: default
             {%- else -%}
             <div class="col-lg-7 text-center px-4 d-flex align-items-center order-1 order-lg-2 mb-4 mb-lg-0">
             {%- endif -%}
-                <img class="portfolio-image img-fluid mx-auto w-100" src="{{ portfolio.featured_image | relative_url }}"
-                    alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" />
+                <img class="portfolio-image img-fluid mx-auto w-100" src="{{ portfolio.featured_image | relative_url }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" />
             </div>
             <div class="col-lg-5 px-4 d-flex align-items-center order-1">
         {%- else -%}
@@ -30,18 +29,20 @@ layout: default
                     <div class="mb-4">
                         {% if portfolio.tags.size > 0 %}
                         {% for tag in portfolio.tags %}
-                            <span class="badge lang-{{tag}}">{{ tag | upcase }}</span>
+                        <span class="badge lang-{{tag}}">{{ tag | upcase }}</span>
                         {% endfor %}
                         {% endif %}
                     </div>
                     {{ portfolio.content }}
 
-                    {% if portfolio.github_link %}
-                    <a class="portfolio-action btn btn-lg btn-light mb-4" target="_blank" href="{{ portfolio.github_link }}"><i class="social-logo social-logo-github"></i> Github Repo</a>
-                    {% endif %}
-                    {% if portfolio.download_link %}
-                    <a class="portfolio-action btn btn-lg btn-light mb-4" target="_blank" href="{{ portfolio.download_link }}">Download</a>
-                    {% endif %}
+                    {% for link in portfolio.links %}
+                    <a class="portfolio-action btn btn-lg btn-light mb-4" target="_blank" href="{{ link.link }}" title="{{ link.title }}">
+                        {% if link.icon %}
+                        <i class="social-logo social-logo-github"></i> 
+                        {% endif %}
+                        {{ link.title }}
+                    </a>
+                    {% endfor %}
                 </div>
             </div>
         </article>
