@@ -11,7 +11,7 @@ layout: default
                 <!-- Left Sidebar -->
                 <div class="sticky-top no-print" style="padding-top: 2rem;">
                     <div class="card text-center" style="border-radius: 0;">
-                        <div class="bg-purple text-white p-4">
+                        <div class="bg-gradient text-white p-4">
                             <div class="row">
                                 <div class="col-4 col-lg-12">
                                     <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
@@ -25,9 +25,9 @@ layout: default
                             </div>
                         </div>
                         <div class="text-muted no-print p-4">
-                            <button class="btn bg-purple text-white btn-block rounded-pill text-uppercase"
+                            <button class="btn bg-gradient text-white btn-block rounded-pill text-uppercase"
                                 onclick="window.print()">Print CV</button>
-                            <button class="btn bg-purple text-white btn-block rounded-pill text-uppercase"
+                            <button class="btn bg-gradient text-white btn-block rounded-pill text-uppercase"
                                 onclick="window.print()">Download CV</button>
                         </div>
                     </div>
@@ -198,7 +198,7 @@ layout: default
                             <div class="col-6">
                                 <p class="mb-0 d-inline">{{ skill.name }} <span class="print float-right">{{ skill.stats }}/100</span></p>
                                 <div class="progress mb-2 no-print">
-                                    <div class="progress-bar progress-bar-theme bg-purple" role="progressbar"
+                                    <div class="progress-bar progress-bar-theme bg-gradient" role="progressbar"
                                         aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats }}%;">
                                         <span class="sr-only">{{ skill.stats }}/100</span>
                                     </div>
@@ -291,7 +291,7 @@ layout: default
                     </div>
                     <div class="text-muted px-0 mt-4">
                         <a href="{{ '/portfolios' | relative_url }}" target="_blank"
-                            class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
+                            class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
                             See More : https://magicjar.github.io/portfolios
                         </p>
@@ -358,7 +358,7 @@ layout: default
                         {%- endfor -%}
                     </div>
                     <div class="text-muted px-0 mt-4">
-                        <a href="{{ '/blog' | relative_url }}" class="btn bg-purple text-white btn-block rounded-pill no-print">SEE MORE</a>
+                        <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
                         <p class="text-center print mb-0">
                             See More : https://magicjar.github.io/blog
                         </p>

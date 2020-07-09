@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <!-- +++++ Hero +++++ -->
 <div id="hero" class="min-vh-100 d-flex flex-column">
 
@@ -25,20 +24,17 @@ layout: default
 
 <!-- +++++ Blog +++++ -->
 {%- if site.posts.size > 0 and site.show_blog -%}
-
 <div id="blog" class="min-vh-100 d-flex flex-column position-relative">
   <div class="container my-auto py-5">
     <h2 class="mb-5 text-center">{{ page.list_title | default: "Blog" }}</h2>
     <div class="card-columns">
-
       {%- for post in site.posts limit:site.post_limit -%}
-
-      <div class="card rounded-0">
+      <div class="card">
         {%- if post.cover -%}
         <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" class="gradient-thumbnail">
         {%- endif -%}
         <div class="card-body">
-          <h3 class="card-title">
+          <h3 class="h4 card-title">
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>
           <p class="card-text">
@@ -46,18 +42,14 @@ layout: default
             {{ post.excerpt }}
             {%- endif -%}
           </p>
-
           {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
           <p class="card-text text-right"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
         </div>
       </div>
-
       {%- endfor -%}
-
     </div>
     <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill mt-5">SEE MORE</a>
     <a href="{{ "/feed.xml" | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill">SUBSCRIBE RSS</a>
   </div>
 </div>
-
 {%- endif -%}
