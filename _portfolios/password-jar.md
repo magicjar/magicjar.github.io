@@ -10,10 +10,9 @@ tags: js
 icon_image:
 featured_image: /assets/images/portfolios/password-jar.png
 
-links: [{
-    title: Github Repo,
-    icon: social-logo-github,
+links:
+  - title: Github Repo
+    icon: social-logo-github
     link: https://github.com/magicjar/password-jar
-}]
 ---
 A client-side password generator. Easily generate strong and save, easy to remember, and PIN password to secure your online account.

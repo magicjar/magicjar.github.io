@@ -10,10 +10,9 @@ tags: php vue html
 icon_image:
 featured_image: /assets/images/portfolios/portend.png
 
-links: [{
-    title: Github Repo,
-    icon: social-logo-github,
+links:
+  - title: Github Repo
+    icon: social-logo-github
     link: https://github.com/magicjar/portend
-}]
 ---
 A simple portfolio dashboard build with Laravel and Vue JS.

@@ -10,14 +10,12 @@ tags: js
 icon_image:
 featured_image: /assets/images/portfolios/retro-sprite-generator.gif
 
-links: [{
-    title: Github Repo,
-    icon: social-logo-github,
+links:
+  - title: Github Repo
+    icon: social-logo-github
     link: https://github.com/magicjar/retro-sprite-generator
-}, {
-    title: Download,
-    icon: ,
+  - title: Download
+    icon: 
     link: https://github.com/magicjar/retro-sprite-generator/archive/master.zip
-}]
 ---
 Retro Sprite Generator is a script for generating sprite sheet from Frame Animation in Photoshop. It automaticaly transform all frame into one sprite sheet file and save it as PNG.
