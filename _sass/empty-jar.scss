@@ -1,25 +1,20 @@
+// Bootstrap Colors
 $theme-colors: ("primary": #00a1ff);
+$theme-colors: map-remove($theme-colors, "success", "info", "warning", "danger", "dark");
 
-// Light Mode Variable
-$main-background-light: #f1f1f1;
-$main-color-light: #494f54;
-$blockquote-bg-light: #d5d0de;
-$card-bg-light: rgba(255,255,255,.05);
-$hero-gradient-bg-light: linear-gradient(45deg, #705bce, #c3639b);
+// Bootstrap Fonts
+$font-family-base: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-// Dark Mode Variable
-$main-background-dark: #141516;
-$main-color-dark: #a2aabd;
-$blockquote-bg-dark: #2c3238;
-$card-bg-dark: $card-bg-light;
-$hero-gradient-bg-dark: linear-gradient(45deg, #101829, #351a1a);
+// Bootstrap Borders
+$border-radius: 10px !default;
+
+// Bootstrap Custom Forms
+$custom-control-indicator-size: 1.5rem !default;
 
 // Required
 @import "../node_modules/bootstrap/scss/functions";
-@import "variables";
+@import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-
-$theme-colors: map-remove($theme-colors, "success", "info", "warning", "danger", "dark");
 
 // Optional
 // @import "../node_modules/bootstrap/scss/root";
@@ -57,6 +52,19 @@ $theme-colors: map-remove($theme-colors, "success", "info", "warning", "danger",
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/print";
 
+// Light Mode Variable
+$main-background-light: #f1f1f1;
+$main-color-light: #494f54;
+$blockquote-bg-light: #d5d0de;
+$card-bg-light: rgba(255,255,255,.05);
+$hero-gradient-bg-light: linear-gradient(45deg, #705bce, #c3639b);
+
+// Dark Mode Variable
+$main-background-dark: #141516;
+$main-color-dark: #a2aabd;
+$blockquote-bg-dark: #2c3238;
+$card-bg-dark: $card-bg-light;
+$hero-gradient-bg-dark: linear-gradient(45deg, #101829, #351a1a);
 
 body {
     color: $main-color-light;
@@ -73,13 +81,6 @@ body {
 
     #hero {
         background: $hero-gradient-bg-light;
-    }
-
-    #blog {
-        .card {
-            border-radius: 10px;
-            overflow: hidden;
-        }
     }
 }
 
@@ -111,7 +112,7 @@ html, body {
 
 pre {
     padding: 1.25rem;
-    border-radius: .5rem;
+    border-radius: $border-radius;
     margin-bottom: 2rem;
 
     code {
@@ -148,7 +149,7 @@ pre {
 
 blockquote {
     padding: 1.5rem 2rem .1rem 2rem;
-    border-radius: .5rem;
+    border-radius: $border-radius;
 }
 
 .print {
@@ -224,7 +225,7 @@ blockquote {
         z-index: 1;
         text-align: left;
         font-size: 1rem;
-        border-radius: 10px;
+        border-radius: $border-radius;
         background-color: white;
 
         ul {
@@ -272,7 +273,6 @@ blockquote {
         padding: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
-        border-radius: 0;
 
         h2 {
             padding: 0;
@@ -309,14 +309,6 @@ blockquote {
         h2 {
             text-decoration: underline;
         }
-    }
-
-    .cv-skills {
-        background-color: #7850c8;
-        color: #efefef;
-        border-radius: 0em 0em 3em 3em;
-        top: -3em;
-        z-index: 0;
     }
 
     hr {

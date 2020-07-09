@@ -31,7 +31,7 @@ layout: default
       {%- for post in site.posts limit:site.post_limit -%}
       <div class="card">
         {%- if post.cover -%}
-        <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" class="gradient-thumbnail">
+        <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" class="gradient-thumbnail card-img-top">
         {%- endif -%}
         <div class="card-body">
           <h3 class="h4 card-title">
@@ -49,7 +49,7 @@ layout: default
       {%- endfor -%}
     </div>
     <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill mt-5">SEE MORE</a>
-    <a href="{{ "/feed.xml" | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill">SUBSCRIBE RSS</a>
+    <a href="{{ '/feed.xml' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill">SUBSCRIBE RSS</a>
   </div>
 </div>
 {%- endif -%}

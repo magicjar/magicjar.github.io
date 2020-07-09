@@ -10,8 +10,8 @@ layout: default
             <div class="col-lg-4 col-xl-3">
                 <!-- Left Sidebar -->
                 <div class="sticky-top no-print" style="padding-top: 2rem;">
-                    <div class="card text-center" style="border-radius: 0;">
-                        <div class="bg-gradient text-white p-4">
+                    <div class="card text-center">
+                        <div class="card-header bg-gradient text-white p-4">
                             <div class="row">
                                 <div class="col-4 col-lg-12">
                                     <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
@@ -24,7 +24,7 @@ layout: default
                                 </div>
                             </div>
                         </div>
-                        <div class="text-muted no-print p-4">
+                        <div class="no-print p-4">
                             <button class="btn bg-gradient text-white btn-block rounded-pill text-uppercase"
                                 onclick="window.print()">Print CV</button>
                             <button class="btn bg-gradient text-white btn-block rounded-pill text-uppercase"
@@ -277,8 +277,8 @@ layout: default
                             {% assign sorted = site.portfolios | sort: 'release_date' | reverse %}
                             {% for portfolio in sorted %}
                             {% if portfolio.show_on_resume %}
-                            <div class="card rounded-0">
-                                <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top rounded-0">
+                            <div class="card">
+                                <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top">
                                 <div class="card-body p-3 text-center">
                                     <h3 class="h5 card-title">{{ portfolio.title }}</h3>
                                     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
