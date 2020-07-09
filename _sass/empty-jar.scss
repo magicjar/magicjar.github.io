@@ -124,8 +124,8 @@ pre {
     padding: 0 0 4rem;
 }
 
-.cv-content {
-    padding-right: calc(4rem + 15px);
+#navigation {
+    display: none;
 }
 
 .post {
@@ -260,6 +260,14 @@ blockquote {
             min-width: 300px;
             left: initial;
         }
+    }
+
+    #navigation {
+        display: inherit;
+    }
+
+    .cv-content {
+        padding-right: calc(4rem + 15px);
     }
 }
 // End NAVBAR
