@@ -158,14 +158,14 @@ blockquote {
 }
 
 @media print {
+    body {
+        font-size: 14px;
+    }
+
     #cv {
         .cv-card {
             margin-top: 1rem !important;
             margin-bottom: 1rem !important;
-
-            h2 {
-                margin-bottom: 1rem !important;
-            }
         }
     }
 
@@ -270,20 +270,15 @@ blockquote {
     background-color: #f1f1f1;
 
     .cv-card {
-        padding: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
 
-        h2 {
-            padding: 0;
-            margin-bottom: 2rem;
-            border: 0;
-            font-weight: bold;
-            text-transform: uppercase;
+        .card-body {
+            padding: 2rem;
         }
 
-        .card-body {
-            padding: 0;
+        h2 {
+            margin-bottom: 1rem;
         }
 
         td {
@@ -325,31 +320,22 @@ blockquote {
 
     .edu-year {
         float: right;
-        background: lightgreen;
         height: 2rem;
         width: 100%;
         position: relative;
-        background-color: #dee2e6;
-
-        &::before {
-            content: "";
-            position: absolute;
-            right: -1rem;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-left: 1rem solid #dee2e6;
-            border-top: 1rem solid transparent;
-            border-bottom: 1rem solid transparent;
-        }
+        background: $hero-gradient-bg-light;
+        border-radius: $border-radius;
 
         &::after {
             content: '\2022';
             position: absolute;
             top: 4px;
-            right: -4px;
-            color: white;
+            right: 8px;
         }
+    }
+
+    td.border-left {
+        border-left-color: #c3639b !important;
     }
 
     .bg-gradient {

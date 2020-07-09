@@ -103,8 +103,8 @@ education:
     active: 2012 - 2016
     degree: Bachelor's Degree (S.Kom)
     major: in Information Technology
-  # - institution: SMA N 1 Sedayu
-  #   active: 2009 - 2011
+  - institution: SMA N 1 Sedayu
+    active: 2009 - 2011
   #   degree: Senior High School
   #   major: IPA
   # - institution: SMP N 3 Godean

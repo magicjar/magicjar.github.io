@@ -128,21 +128,18 @@ layout: default
 
                 {%- if site.data.resume.personalinfo.show -%}
                 <div class="card cv-card" id="profile">
-                    <div class="row">
-                        <div class="col-3 print">
-                            <img class="img-fluid img-responsive" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
-                        </div>
-                        <div class="col">
-                            <h2 class="h4 font-weight-bold text-uppercase">{{ site.data.resume.greetings }}</h2>
-                            <div class="card-body">
-                                
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3 print">
+                                <img class="img-fluid img-responsive" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
+                            </div>
+                            <div class="col">
+                                <h2 class="h4 font-weight-bold text-uppercase">{{ site.data.resume.greetings }}</h2>
                                 <p>{{ site.data.resume.introduction }}</p>
                                 <small class="float-right">Last updated: {{ site.data.resume.last_update }}</small>
                             </div>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="card-body">
+                        <hr>
                         <h3 class="h5 mb-4">personal information</h3>
                         <table>
                             <tbody>
@@ -160,8 +157,8 @@ layout: default
 
                 {%- if site.data.resume.skills.show -%}
                 <div class="card cv-card" id="skill">
-                    <h2 class="h4 font-weight-bold text-uppercase">Skill</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Skill</h2>
                         <div class="row">
                             <div class="col-6">
                                 <h3 class="h5 mb-4">soft skill</h3>
@@ -187,9 +184,7 @@ layout: default
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="card-body">
+                        <hr>
                         <h3 class="h5">hard skill</h3>
                         <div class="row">
                             {%- for hardskill in site.data.resume.skills.lists[2].hardskill -%}
@@ -213,9 +208,9 @@ layout: default
                 
                 {%- if site.data.resume.experience.show or site.data.resume.education.show -%}
                 <div class="card cv-card" id="education">
-                    {%- if site.data.resume.experience.show -%}
-                    <h2 class="h4 font-weight-bold text-uppercase">Experiences</h2>
                     <div class="card-body">
+                        {%- if site.data.resume.experience.show -%}
+                        <h2 class="h4 font-weight-bold text-uppercase">Experiences</h2>
                         {%- assign experiences = site.data.resume.experience.lists -%}
                         {%- assign size = experiences.size | minus: 1 -%}
                         {%- if experiences -%}
@@ -223,8 +218,8 @@ layout: default
                             <tbody>
                                 {%- for experience in experiences -%}
                                 <tr>
-                                    <td class="edu-year text-center align-middle text-nowrap">{{ experience.active }}</td>
-                                    <td class="border-left {%- if experience == experiences[size] -%} border-white {%- endif -%}">
+                                    <td class="edu-year text-center text-white align-middle text-nowrap">{{ experience.active }}</td>
+                                    <td>
                                         <h3 class="h5">{{ experience.job }}</h3>
                                         {%- for company in experience.company -%}
                                         <strong>{{ company.name }}</strong>
@@ -236,16 +231,14 @@ layout: default
                             </tbody>
                         </table>
                         {%- endif -%}
-                    </div>
-                    {%- endif -%}
+                        {%- endif -%}
 
-                    {%- if site.data.resume.experience.show and site.data.resume.education.show -%}
-                    <hr>
-                    {%- endif -%}
+                        {%- if site.data.resume.experience.show and site.data.resume.education.show -%}
+                        <hr>
+                        {%- endif -%}
                     
-                    {%- if site.data.resume.education.show -%}
-                    <h2 class="h4 font-weight-bold text-uppercase">Educations</h2>
-                    <div class="card-body">
+                        {%- if site.data.resume.education.show -%}
+                        <h2 class="h4 font-weight-bold text-uppercase">Educations</h2>
                         {%- assign educations = site.data.resume.education.lists -%}
                         {%- assign size = educations.size | minus: 1 -%}
                         <table>
@@ -253,8 +246,8 @@ layout: default
                                 {%- if educations -%}
                                 {%- for education in educations -%}
                                 <tr>
-                                    <td class="edu-year text-center align-middle text-nowrap">{{ education.active }}</td>
-                                    <td class="border-left {%- if education == educations[size] -%} border-white {%- endif -%}">
+                                    <td class="edu-year text-center text-white align-middle text-nowrap">{{ education.active }}</td>
+                                    <td>
                                         <h3 class="h5">{{ education.institution }}</h3>
                                         <strong>{{ education.degree }}</strong>
                                         <p>{{ education.major }}</p>
@@ -271,8 +264,8 @@ layout: default
 
                 {%- if site.data.resume.portfolio.show -%}
                 <div class="card cv-card" id="portfolio">
-                    <h2 class="h4 font-weight-bold text-uppercase">Portfolios</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Portfolios</h2>
                         <div class="card-columns">
                             {% assign sorted = site.portfolios | sort: 'release_date' | reverse %}
                             {% for portfolio in sorted %}
@@ -288,21 +281,21 @@ layout: default
                             {% endif %}
                             {% endfor %}
                         </div>
-                    </div>
-                    <div class="text-muted px-0 mt-4">
-                        <a href="{{ '/portfolios' | relative_url }}" target="_blank"
-                            class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
-                        <p class="text-center print mb-0">
-                            See More : https://magicjar.github.io/portfolios
-                        </p>
+                        <div class="text-muted px-0 mt-4">
+                            <a href="{{ '/portfolios' | relative_url }}" target="_blank"
+                                class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
+                            <p class="text-center print mb-0">
+                                See More : https://magicjar.github.io/portfolios
+                            </p>
+                        </div>
                     </div>
                 </div>
                 {%- endif -%}
                 
                 {%- if site.data.resume.reference.show -%}
                 <div class="card cv-card" id="reference">
-                    <h2 class="h4 font-weight-bold text-uppercase">References</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">References</h2>
                         <div class="row">
                             {%- for ref in site.data.resume.reference.lists -%}
                             <div class="col-6 col-sm-4 col-lg-3 text-center">
@@ -319,8 +312,8 @@ layout: default
 
                 {%- if site.data.resume.publication.show -%}
                 <div class="card cv-card" id="publication">
-                    <h2 class="h4 font-weight-bold text-uppercase">Publications</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Publications</h2>
                         <div class="row">
                             {%- for pub in site.data.resume.publication.lists -%}
                             
@@ -332,8 +325,8 @@ layout: default
 
                 {%- if site.data.resume.interest.show -%}
                 <div class="card cv-card" id="interest">
-                    <h2 class="h4 font-weight-bold text-uppercase">Interests</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Interests</h2>
                         <ul class="list-inline mb-0">
                             {%- for interest in site.data.resume.interest.lists -%}
                             <li class="list-inline-item mb-2 mr-3">
@@ -349,36 +342,38 @@ layout: default
 
                 {%- if site.data.resume.blog.show -%}
                 <div class="card cv-card no-print" id="blog">
-                    <h2 class="h4 font-weight-bold text-uppercase">Blog</h2>
                     <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Blog</h2>
                         {%- for post in site.posts limit:site.data.resume.blog.limit -%}
                         <a href="{{ post.url | relative_url }}" target="_blank">
                             <h3 class="h5">{{ post.title | escape }}</h3>
                         </a>
                         {%- endfor -%}
-                    </div>
-                    <div class="text-muted px-0 mt-4">
-                        <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
-                        <p class="text-center print mb-0">
-                            See More : https://magicjar.github.io/blog
-                        </p>
+                        <div class="text-muted px-0 mt-4">
+                            <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
+                            <p class="text-center print mb-0">
+                                See More : https://magicjar.github.io/blog
+                            </p>
+                        </div>
                     </div>
                 </div>
                 {%- endif -%}
 
                 {%- if site.data.resume.contact.show -%}
                 <div class="card cv-card no-print" id="contact">
-                    <h2 class="h4 font-weight-bold text-uppercase">Contact</h2>
-                    <div class="card-body text-center">
-                        {%- if site.data.resume.contact.message -%}
-                        <p>{{ site.data.resume.contact.message }}</p>
-                        {%- endif -%}
-                        {%- if site.data.resume.contact.email -%}
-                        <p>{{ site.data.resume.contact.email }}</p>
-                        {%- endif -%}
-                        {%- if site.data.resume.contact.show_social_media -%}
-                        {%- include socialmedia.html -%}
-                        {%- endif -%}
+                    <div class="card-body">
+                        <h2 class="h4 font-weight-bold text-uppercase">Contact</h2>
+                        <div class="text-center">
+                            {%- if site.data.resume.contact.message -%}
+                            <p>{{ site.data.resume.contact.message }}</p>
+                            {%- endif -%}
+                            {%- if site.data.resume.contact.email -%}
+                            <p>{{ site.data.resume.contact.email }}</p>
+                            {%- endif -%}
+                            {%- if site.data.resume.contact.show_social_media -%}
+                            {%- include socialmedia.html -%}
+                            {%- endif -%}
+                        </div>
                     </div>
                 </div>
                 {%- endif -%}
