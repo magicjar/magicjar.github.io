@@ -7,7 +7,7 @@ introduction: >-
   of turning your imagination into a playable game.
 picture: /assets/images/user.png
 occupation: Game Developer
-last_update: 21 May 2020
+last_update: 10 July 2020
 
 personalinfo:
   show: true
@@ -61,8 +61,8 @@ skills:
         stats: 90
       - name: CSS
         stats: 85
-      - name: JS
-        stats: 65
+      - name: Javascript
+        stats: 70
       - name: PHP
         stats: 60
     - category: Others
@@ -71,14 +71,12 @@ skills:
         stats: 70
       - name: Photoshop
         stats: 80
+      - name: Corel Draw
+        stats: 85
       - name: blender
         stats: 60
-      - name: MS Word
-        stats: 95
-      - name: MS PowerPoint
-        stats: 80
-      - name: MS Excel
-        stats: 55
+      - name: Microsoft Office
+        stats: 90
 
 experience:
   show: true
@@ -179,10 +177,9 @@ interest:
 
 blog:
   show: true
-  limit: 3
+  limit: 5
 
 contact:
   show: true
   message: Feel free to reach me.
-  email: fajarsetya@live.com
   show_social_media: true
