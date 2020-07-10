@@ -10,8 +10,8 @@ layout: default
   <header class="container my-auto" id="about">
     <div class="row text-center text-lg-left my-auto">
       <div class="col-lg-4 photo d-flex align-items-center text-center">
-        <div class="col-12 text-center">
-          <img class="rounded-circle my-auto" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Personal Site">
+        <div class="col-12 text-center mb-4">
+          <img class="rounded-circle mb-3" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Personal Site">
           {%- include socialmedia.html -%}
         </div>
       </div><!-- /col-lg-4 -->
@@ -33,7 +33,7 @@ layout: default
         {%- if post.cover -%}
         <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" class="gradient-thumbnail card-img-top">
         {%- endif -%}
-        <div class="card-body">
+        <div class="card-body p-4">
           <h3 class="h4 card-title">
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>

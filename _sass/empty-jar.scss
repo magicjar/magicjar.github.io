@@ -5,7 +5,8 @@ $theme-colors: ("primary": #00a1ff);
 $font-family-base: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 // Bootstrap Borders
-$border-radius: 10px !default;
+$border-radius:     10px !default;
+$border-radius-lg:  $border-radius;
 
 // Bootstrap Custom Forms
 $custom-control-indicator-size: 1.5rem !default;
@@ -158,6 +159,14 @@ blockquote {
     display: none;
 }
 
+.card-columns {
+    column-gap: .5rem;
+
+    .card {
+        margin-bottom: .5rem;
+    }
+}
+
 @media print {
     body {
         font-size: 14px;
@@ -281,10 +290,6 @@ blockquote {
     .cv-card {
         margin-top: 2rem;
         margin-bottom: 2rem;
-
-        .card-body {
-            padding: 2rem;
-        }
 
         h2 {
             margin-bottom: 1rem;

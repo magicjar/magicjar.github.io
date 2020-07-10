@@ -11,12 +11,12 @@ layout: default
         {% for post in site.posts %}
         <article class="row">
             {%- if post.cover -%}
-            <div class="col-lg-5 text-center px-4 d-flex align-items-center">
+            <div class="col-lg-5 text-center px-3 d-flex align-items-center">
                 <img class="mb-4 mb-lg-0 portfolio-image img-fluid w-100 gradient-thumbnail" src="{{ post.cover | relative_url }}" alt="{{ post.title }}" />
             </div>
-            <div class="col-lg-7 px-4 d-flex align-items-center">
+            <div class="col-lg-7 px-3 d-flex align-items-center">
             {%- else -%}
-            <div class="col-12 px-4 d-flex align-items-center">
+            <div class="col-12 px-3 d-flex align-items-center">
             {%- endif -%}
             
                 <div class="w-100">
