@@ -25,7 +25,9 @@ $(document).on('click', 'a[href]', function (e) {
 
     e.preventDefault();
 
-    var pos = $id.offset().top;
+    var padding = 2 * 16;
+
+    var pos = $id.offset().top - padding;
 
     $('body, html').animate({ scrollTop: pos }, 600);
 });
