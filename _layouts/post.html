@@ -7,8 +7,7 @@ layout: default
 
   {%- include navigation.html -%}
 
-  <article class="post h-entry container" itemscope itemtype="http://schema.org/BlogPosting">
-  
+  <article class="post container mb-5" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
       <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
       <p class="post-meta mb-0">
@@ -29,14 +28,13 @@ layout: default
         {%- endif -%}
       </p>
     </header>
-  
-    <div class="post-content e-content row " itemprop="articleBody">
-      <div class="post-toc col-lg-4 mt-4">
-        <div class="sticky-top py-4">
+    <div class="post-content row" itemprop="articleBody">
+      <div class="col-lg-4 my-4">
+        <div class="sticky-top pt-4">
           {%- include toc.html -%}
         </div>
       </div>
-      <div class="col-lg-8 mt-lg-4 pt-4" style="margin-bottom: 2rem;">
+      <div class="col-lg-8 mt-4 pt-4">
         {{ content }}
       </div>
 
@@ -59,20 +57,22 @@ layout: default
         {%- endfor -%}
       {%- endif -%}
 
-      <div class="col-sm-6 text-center" style="margin-bottom: 2rem;">
-        {%- if prev_post -%}
-        <div class="card p-3 d-block rounded-0">
-          <a class="btn btn-lg btn-block border rounded-pill mb-3" href="{{ prev_post.url }}">< Previous Post</a><a class="ml-4" href="{{ prev_post.url }}">{{ prev_post.title }}</a>
+      {%- if prev_post -%}
+      <div class="col-sm-6">
+        <div class="card text-center p-4 mt-2">
+          <p>{{ prev_post.title }}</p>
+          <a class="btn btn-lg btn-outline-primary btn-block rounded-pill" href="{{ prev_post.url }}">< Previous Post</a>
         </div>
-        {%- endif -%}
       </div>
-      <div class="col-sm-6 text-center" style="margin-bottom: 2rem;">
-        {%- if next_post -%}
-        <div class="card p-3 d-block rounded-0">
-          <a class="btn btn-lg btn-block border rounded-pill mb-3" href="{{ next_post.url }}">Next Post ></a><a class="mr-4" href="{{ next_post.url }}">{{ next_post.title }}</a>
+      {%- endif -%}
+      {%- if next_post -%}
+      <div class="col-sm-6">
+        <div class="card text-center p-4 mt-2">
+          <p>{{ next_post.title }}</p>
+          <a class="btn btn-lg btn-outline-primary btn-block rounded-pill" href="{{ next_post.url }}">Next Post ></a>
         </div>
-        {%- endif -%}
       </div>
+      {%- endif -%}
     </div>
 
     {%- if site.disqus.shortname -%}
