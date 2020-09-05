@@ -14,7 +14,7 @@ layout: default
                         <div class="card-header bg-gradient text-white p-4">
                             <div class="row">
                                 <div class="col-4 col-lg-12">
-                                    <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
+                                    <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
                                 </div>
                                 <div class="col-7 col-lg-12">
                                     <h1 class="h4 card-title mt-4">{{ site.data.resume.name }}</h1>
@@ -131,7 +131,7 @@ layout: default
                     <div class="card-body p-4">
                         <div class="row">
                             <div class="col-3 print">
-                                <img class="img-fluid img-responsive" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="200" width="200">
+                                <img class="img-fluid img-responsive" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
                             </div>
                             <div class="col">
                                 <h2 class="h4 font-weight-bold text-uppercase">{{ site.data.resume.greetings }}</h2>
@@ -141,7 +141,7 @@ layout: default
                         </div>
                         <hr>
                         <h3 class="h5 mb-3">personal information</h3>
-                        <table>
+                        <table class="no-print">
                             <tbody>
                                 {%- for personalinfo in site.data.resume.personalinfo.lists -%}
                                 <tr>
@@ -151,6 +151,31 @@ layout: default
                                 {%- endfor -%}
                             </tbody>
                         </table>
+                        <div class="row no-gutters">
+                            {%- assign personalinfos = site.data.resume.personalinfo.lists -%}
+                            {%- assign size = personalinfos.size -%}
+                            {%- assign halfSize = 6 | divided_by: 2.0 | ceil -%}
+                            <table class="col-6 print">
+                                <tbody>
+                                    {%- for personalinfo in personalinfos limit:halfSize -%}
+                                    <tr>
+                                        <th class="text-uppercase text-nowrap" scope="row">{{ personalinfo.title }}</th>
+                                        <td>{{ personalinfo.value }}</td>
+                                    </tr>
+                                    {%- endfor -%}
+                                </tbody>
+                            </table>
+                            <table class="col-6 print">
+                                <tbody>
+                                    {%- for personalinfo in personalinfos offset:halfSize -%}
+                                    <tr>
+                                        <th class="text-uppercase text-nowrap" scope="row">{{ personalinfo.title }}</th>
+                                        <td>{{ personalinfo.value }}</td>
+                                    </tr>
+                                    {%- endfor -%}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 {%- endif -%}
@@ -190,14 +215,17 @@ layout: default
                             {%- for hardskill in site.data.resume.skills.lists[2].hardskill -%}
                             <h4 class="h6 col-12 mt-3"><strong>{{ hardskill.category }}</strong></h4>
                             {%- for skill in hardskill.skill -%}
-                            <div class="col-12 col-md-6">
-                                <p class="mb-0 d-inline">{{ skill.name }} <span class="print float-right">{{ skill.stats }}/100</span></p>
-                                <div class="progress mb-2 no-print">
+                            <div class="col-12 col-md-6 no-print">
+                                <p class="mb-0">{{ skill.name }} <span class="float-right">{{ skill.stats }}/100</span></p>
+                                <div class="progress mb-2">
                                     <div class="progress-bar progress-bar-theme bg-gradient" role="progressbar"
                                         aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats }}%;">
                                         <span class="sr-only">{{ skill.stats }}/100</span>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-4 print">
+                                <p class="mb-0">{{ skill.name }} - {{ skill.stats }}/100</p>
                             </div>
                             {%- endfor -%}
                             {%- endfor -%}
@@ -265,35 +293,6 @@ layout: default
                     {%- endif -%}
                 </div>
                 {%- endif -%}
-
-                {%- if site.data.resume.portfolio.show -%}
-                <div class="card cv-card" id="portfolio">
-                    <div class="card-body p-4">
-                        <h2 class="h4 font-weight-bold text-uppercase">Portfolios</h2>
-                        <div class="card-columns">
-                            {% assign sorted = site.portfolios | sort: 'release_date' | reverse %}
-                            {% for portfolio in sorted %}
-                            {% if portfolio.show_on_resume %}
-                            <div class="card">
-                                <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top">
-                                <div class="card-body p-2 text-center">
-                                    <h3 class="h5">{{ portfolio.title }}</h3>
-                                    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-                                    <p class="card-text text-muted"><small>Released: {{ portfolio.release_date | date: date_format }}</small></p>
-                                </div>
-                            </div>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        <div class="text-muted px-0 mt-3">
-                            <a href="{{ '/portfolios' | relative_url }}" target="_blank" class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
-                            <p class="text-center print mb-0">
-                                See More : https://magicjar.github.io/portfolios
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {%- endif -%}
                 
                 {%- if site.data.resume.reference.show -%}
                 <div class="card cv-card" id="reference">
@@ -333,12 +332,44 @@ layout: default
                         <ul class="list-inline mb-0">
                             {%- for interest in site.data.resume.interest.lists -%}
                             <li class="list-inline-item mb-2 mr-3">
-                                <img src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}" height="30" width="30">
+                                <img class="no-print" src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}" height="30" width="30">
                                 {{ interest.name }}
                                 <span class="sr-only">{{ interest.name }}</span>
                             </li>
                             {%- endfor -%}
                         </ul>
+                    </div>
+                </div>
+                {%- endif -%}
+
+                {%- if site.data.resume.portfolio.show -%}
+                <div class="card cv-card" id="portfolio">
+                    <div class="card-body p-4">
+                        <h2 class="h4 font-weight-bold text-uppercase">Portfolios</h2>
+                        <div class="card-columns">
+                            {% assign sorted = site.portfolios | sort: 'release_date' | reverse %}
+                            {% for portfolio in sorted %}
+                            {% if portfolio.show_on_resume %}
+                            <div class="card">
+                                <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}"
+                                    class="card-img-top">
+                                <div class="card-body p-2 text-center">
+                                    <h3 class="h5">{{ portfolio.title }}</h3>
+                                    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+                                    <p class="card-text text-muted"><small>Released:
+                                            {{ portfolio.release_date | date: date_format }}</small></p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="text-muted px-0 mt-3">
+                            <a href="{{ '/portfolios' | relative_url }}" target="_blank"
+                                class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
+                            <p class="text-center print mb-0">
+                                See More : https://magicjar.github.io/portfolios
+                            </p>
+                        </div>
                     </div>
                 </div>
                 {%- endif -%}
