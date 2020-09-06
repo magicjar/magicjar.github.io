@@ -68,15 +68,6 @@ layout: default
                                 </a>
                             </li>
                             {%- endif -%}
-
-                            {%- if site.data.resume.portfolio.show -%}
-                            <li class="list-inline-item mr-0 d-block">
-                                <a title="Portfolio" href="#portfolio">
-                                    <img src="{{ '/assets/icons/001-binders.svg' | relative_url }}" alt="Portfolio's Icon" height="25" width="25">
-                                    <span class="sr-only">Portfolio</span>
-                                </a>
-                            </li>
-                            {%- endif -%}
                             
                             {%- if site.data.resume.reference.show -%}
                             <li class="list-inline-item mr-0 d-block">
@@ -101,6 +92,15 @@ layout: default
                                 <a title="Interest" href="#interest">
                                     <img src="{{ '/assets/icons/011-boat.svg' | relative_url }}" alt="Interest's Icon" height="25" width="25">
                                     <span class="sr-only">Interest</span>
+                                </a>
+                            </li>
+                            {%- endif -%}
+
+                            {%- if site.data.resume.portfolio.show -%}
+                            <li class="list-inline-item mr-0 d-block">
+                                <a title="Portfolio" href="#portfolio">
+                                    <img src="{{ '/assets/icons/001-binders.svg' | relative_url }}" alt="Portfolio's Icon" height="25" width="25">
+                                    <span class="sr-only">Portfolio</span>
                                 </a>
                             </li>
                             {%- endif -%}
