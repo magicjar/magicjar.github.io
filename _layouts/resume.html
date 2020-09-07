@@ -346,18 +346,19 @@ layout: default
                 <div class="card cv-card" id="portfolio">
                     <div class="card-body p-4">
                         <h2 class="h4 font-weight-bold text-uppercase">Portfolios</h2>
-                        <div class="card-columns">
+                        <div class="row p-2">
                             {% assign sorted = site.portfolios | sort: 'release_date' | reverse %}
                             {% for portfolio in sorted %}
                             {% if portfolio.show_on_resume %}
-                            <div class="card">
-                                <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}"
-                                    class="card-img-top">
-                                <div class="card-body p-2 text-center">
-                                    <h3 class="h5">{{ portfolio.title }}</h3>
-                                    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-                                    <p class="card-text text-muted"><small>Released:
-                                            {{ portfolio.release_date | date: date_format }}</small></p>
+                            <div class="col-6 col-md-4 p-2">
+                                <div class="card">
+                                    <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top">
+                                    <div class="card-body p-2 text-center">
+                                        <h3 class="h5">{{ portfolio.title }}</h3>
+                                        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+                                        <p class="card-text text-muted"><small>Released:
+                                                {{ portfolio.release_date | date: date_format }}</small></p>
+                                    </div>
                                 </div>
                             </div>
                             {% endif %}
