@@ -159,14 +159,6 @@ blockquote {
     display: none;
 }
 
-.card-columns {
-    column-gap: .5rem;
-
-    .card {
-        margin-bottom: .5rem;
-    }
-}
-
 @media print {
     body {
         font-size: 14px;
@@ -192,14 +184,6 @@ blockquote {
     .print {
         visibility: visible;
         display: inherit;
-    }
-
-    @media (min-width: 576px) {
-        #portfolio {
-            .card-columns {
-                column-count: 4 !important;
-            }
-        }
     }
 }
 
