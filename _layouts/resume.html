@@ -213,13 +213,13 @@ layout: default
                         <h3 class="h5">hard skill</h3>
                         <div class="row">
                             {%- for hardskill in site.data.resume.skills.lists[2].hardskill -%}
-                            <h4 class="h6 col-12 mt-3"><strong>{{ hardskill.category }}</strong></h4>
+                            <h4 class="h6 col-12 mt-1"><strong>{{ hardskill.category }}</strong></h4>
                             {%- for skill in hardskill.skill -%}
                             <div class="col-12 col-md-6 no-print">
                                 <p class="mb-0">{{ skill.name }} <span class="float-right">{{ skill.stats }}/100</span></p>
                                 <div class="progress mb-2">
                                     <div class="progress-bar progress-bar-theme bg-gradient" role="progressbar"
-                                        aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats }}%;">
+                                        aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats | append : '%' }}">
                                         <span class="sr-only">{{ skill.stats }}/100</span>
                                     </div>
                                 </div>
@@ -410,7 +410,7 @@ layout: default
                 </div>
                 {%- endif -%}
 
-                <div class="text-muted text-center" style="margin-bottom: 2rem;">
+                <div class="text-muted text-center no-print" style="margin-bottom: 2rem;">
                     <small>Icons made by [multiple authors] from @flaticon.</small>
                 </div>
             </div>

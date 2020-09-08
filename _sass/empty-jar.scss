@@ -174,14 +174,14 @@ blockquote {
 
     #cv {
         .cv-card {
-            margin-top: 0px !important;
+            margin-top: 1.25rem !important;
             margin-bottom: -1px !important;
         }
     }
 
     .cv-content {
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
     }
 
     .no-print {
@@ -286,6 +286,10 @@ blockquote {
 #cv {
     color: $main-color-light;
     background-color: #f1f1f1;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 
     .cv-card {
         margin-top: 2rem;
