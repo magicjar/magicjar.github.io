@@ -14,7 +14,9 @@ layout: default
                         <div class="card-header bg-gradient text-white p-4">
                             <div class="row">
                                 <div class="col-4 col-lg-12">
-                                    <img class="img-fluid m-auto mt-5" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                    <a href="{{ site.data.resume.picture_big | relative_url }}" target="_blank">
+                                        <img class="img-fluid m-auto mt-5 rounded-circle" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                    </a>
                                 </div>
                                 <div class="col-7 col-lg-12">
                                     <h1 class="h4 card-title mt-4">{{ site.data.resume.name }}</h1>
@@ -131,7 +133,9 @@ layout: default
                     <div class="card-body p-4">
                         <div class="row">
                             <div class="col-3 print">
-                                <img class="img-fluid img-responsive" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                <a href="{{ site.data.resume.picture_big | relative_url }}">
+                                    <img class="img-fluid img-responsive rounded-circle" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                </a>
                             </div>
                             <div class="col">
                                 <h2 class="h4 font-weight-bold text-uppercase">{{ site.data.resume.greetings }}</h2>

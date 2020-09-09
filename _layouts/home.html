@@ -10,8 +10,10 @@ layout: default
   <header class="container my-auto" id="about">
     <div class="row text-center text-lg-left">
       <div class="col-lg-4 text-center mb-4 my-lg-auto">
+        <a href="{{ site.data.resume.picture_big | relative_url }}" target="_blank">
           <img class="rounded-circle mb-3" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Personal Site">
-          {%- include socialmedia.html -%}
+        </a>
+        {%- include socialmedia.html -%}
       </div>
       <div class="col-lg-8 my-auto">
         {{ content }}
