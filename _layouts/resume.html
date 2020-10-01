@@ -15,13 +15,15 @@ layout: default
                             <div class="row">
                                 <div class="col-4 col-lg-12">
                                     <a href="{{ site.data.resume.picture_big | relative_url }}" target="_blank">
-                                        <img class="img-fluid m-auto mt-5 rounded-circle" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                        <img class="img-fluid m-auto mt-5 rounded-circle"
+                                            src="{{ site.data.resume.picture | relative_url }}"
+                                            alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
                                     </a>
                                 </div>
                                 <div class="col-7 col-lg-12">
                                     <h1 class="h4 card-title mt-4">{{ site.data.resume.name }}</h1>
                                     <p class="card-text">{{ site.data.resume.occupation }}</p>
-                                    
+
                                     {%- include socialmedia.html -%}
                                 </div>
                             </div>
@@ -46,7 +48,8 @@ layout: default
                             {%- if site.data.resume.personalinfo.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Profile" href="#profile">
-                                    <img src="{{ '/assets/icons/017-man.svg' | relative_url }}" alt="Profile's Icon" height="30" width="30">
+                                    <img src="{{ '/assets/icons/017-man.svg' | relative_url }}" alt="Profile's Icon"
+                                        height="30" width="30">
                                     <span class="sr-only">Profile</span>
                                 </a>
                             </li>
@@ -61,38 +64,42 @@ layout: default
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.experience.show or site.data.resume.education.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Experience and Education" href="#education">
-                                    <img src="{{ '/assets/icons/002-briefcase.svg' | relative_url }}" alt="Experience and Education's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/002-briefcase.svg' | relative_url }}"
+                                        alt="Experience and Education's Icon" height="25" width="25">
                                     <span class="sr-only">Experience and Education</span>
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.reference.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Reference" href="#reference">
-                                    <img src="{{ '/assets/icons/003-target.svg' | relative_url }}" alt="Reference's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/003-target.svg' | relative_url }}"
+                                        alt="Reference's Icon" height="25" width="25">
                                     <span class="sr-only">Reference</span>
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.publication.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Publication" href="#publication">
-                                    <img src="{{ '/assets/icons/020-book.svg' | relative_url }}" alt="Publication's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/020-book.svg' | relative_url }}"
+                                        alt="Publication's Icon" height="25" width="25">
                                     <span class="sr-only">Publication</span>
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.interest.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Interest" href="#interest">
-                                    <img src="{{ '/assets/icons/011-boat.svg' | relative_url }}" alt="Interest's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/011-boat.svg' | relative_url }}" alt="Interest's Icon"
+                                        height="25" width="25">
                                     <span class="sr-only">Interest</span>
                                 </a>
                             </li>
@@ -101,25 +108,28 @@ layout: default
                             {%- if site.data.resume.portfolio.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Portfolio" href="#portfolio">
-                                    <img src="{{ '/assets/icons/001-binders.svg' | relative_url }}" alt="Portfolio's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/001-binders.svg' | relative_url }}"
+                                        alt="Portfolio's Icon" height="25" width="25">
                                     <span class="sr-only">Portfolio</span>
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.blog.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Blog" href="#blog">
-                                    <img src="{{ '/assets/icons/004-feather.svg' | relative_url }}" alt="Blog's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/004-feather.svg' | relative_url }}" alt="Blog's Icon"
+                                        height="25" width="25">
                                     <span class="sr-only">Blog</span>
                                 </a>
                             </li>
                             {%- endif -%}
-                            
+
                             {%- if site.data.resume.contact.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Contact" href="#contact">
-                                    <img src="{{ '/assets/icons/005-identification.svg' | relative_url }}" alt="Contact's Icon" height="25" width="25">
+                                    <img src="{{ '/assets/icons/005-identification.svg' | relative_url }}"
+                                        alt="Contact's Icon" height="25" width="25">
                                     <span class="sr-only">Contact</span>
                                 </a>
                             </li>
@@ -134,7 +144,9 @@ layout: default
                         <div class="row">
                             <div class="col-3 print">
                                 <a href="{{ site.data.resume.picture_big | relative_url }}">
-                                    <img class="img-fluid img-responsive rounded-circle" src="{{ site.data.resume.picture | relative_url }}" alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
+                                    <img class="img-fluid img-responsive rounded-circle"
+                                        src="{{ site.data.resume.picture | relative_url }}"
+                                        alt="{{ site.data.resume.name }} Profile Picture" height="150" width="150">
                                 </a>
                             </div>
                             <div class="col">
@@ -194,8 +206,8 @@ layout: default
                                 <ul class="list-inline mb-0">
                                     {%- for softskill in site.data.resume.skills.lists[0].softskill -%}
                                     <li class="list-inline-item mt-2 mr-3">
-                                        <img class="no-print" src="{{ softskill.icon | relative_url }}" alt="{{ softskill.name }}" height="30"
-                                            width="30">
+                                        <img class="no-print" src="{{ softskill.icon | relative_url }}"
+                                            alt="{{ softskill.name }}" height="30" width="30">
                                         {{ softskill.name }}
                                         <span class="sr-only">{{ softskill.name }}</span>
                                     </li>
@@ -220,10 +232,12 @@ layout: default
                             <h4 class="h6 col-12 mt-1"><strong>{{ hardskill.category }}</strong></h4>
                             {%- for skill in hardskill.skill -%}
                             <div class="col-12 col-md-6 no-print">
-                                <p class="mb-0">{{ skill.name }} <span class="float-right">{{ skill.stats }}/100</span></p>
+                                <p class="mb-0">{{ skill.name }} <span class="float-right">{{ skill.stats }}/100</span>
+                                </p>
                                 <div class="progress mb-2">
                                     <div class="progress-bar progress-bar-theme bg-gradient" role="progressbar"
-                                        aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.stats | append : '%' }}">
+                                        aria-valuenow="{{ skill.stats }}" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: {{ skill.stats | append : '%' }}">
                                         <span class="sr-only">{{ skill.stats }}/100</span>
                                     </div>
                                 </div>
@@ -237,7 +251,7 @@ layout: default
                     </div>
                 </div>
                 {%- endif -%}
-                
+
                 {%- if site.data.resume.experience.show or site.data.resume.education.show -%}
                 <div class="card cv-card" id="education">
                     <div class="card-body p-4">
@@ -250,7 +264,8 @@ layout: default
                             <tbody>
                                 {%- for experience in experiences -%}
                                 <tr>
-                                    <td class="edu-year text-center text-white align-middle text-nowrap">{{ experience.active }}</td>
+                                    <td class="edu-year text-center text-white align-middle text-nowrap">
+                                        {{ experience.active }}</td>
                                     <td>
                                         <h3 class="h5">{{ experience.job }}</h3>
                                         {%- for company in experience.company -%}
@@ -268,7 +283,7 @@ layout: default
                         {%- if site.data.resume.experience.show and site.data.resume.education.show -%}
                         <hr>
                         {%- endif -%}
-                    
+
                         {%- if site.data.resume.education.show -%}
                         <h2 class="h4 font-weight-bold text-uppercase">Educations</h2>
                         {%- assign educations = site.data.resume.education.lists -%}
@@ -278,7 +293,8 @@ layout: default
                                 {%- if educations -%}
                                 {%- for education in educations -%}
                                 <tr>
-                                    <td class="edu-year text-center text-white align-middle text-nowrap">{{ education.active }}</td>
+                                    <td class="edu-year text-center text-white align-middle text-nowrap">
+                                        {{ education.active }}</td>
                                     <td>
                                         <h3 class="h5">{{ education.institution }}</h3>
                                         {%- if education.degree -%}
@@ -297,7 +313,7 @@ layout: default
                     {%- endif -%}
                 </div>
                 {%- endif -%}
-                
+
                 {%- if site.data.resume.reference.show -%}
                 <div class="card cv-card" id="reference">
                     <div class="card-body p-4">
@@ -305,7 +321,8 @@ layout: default
                         <div class="row">
                             {%- for ref in site.data.resume.reference.lists -%}
                             <div class="col-6 col-sm-4 col-lg-3 text-center">
-                                <img class="img-fluid rounded-circle mb-3" src="{{ ref.photo | relative_url }}" alt="{{ ref.name }}'s Photo">
+                                <img class="img-fluid rounded-circle mb-3" src="{{ ref.photo | relative_url }}"
+                                    alt="{{ ref.name }}'s Photo">
                                 <h3 class="h5">{{ ref.name }}</h3>
                                 <p class="text-muted mb-0">{{ ref.occupation }}</p>
                                 <strong>{{ ref.contact }}</strong>
@@ -322,7 +339,7 @@ layout: default
                         <h2 class="h4 font-weight-bold text-uppercase">Publications</h2>
                         <div class="row">
                             {%- for pub in site.data.resume.publication.lists -%}
-                            
+
                             {%- endfor -%}
                         </div>
                     </div>
@@ -336,7 +353,8 @@ layout: default
                         <ul class="list-inline mb-0">
                             {%- for interest in site.data.resume.interest.lists -%}
                             <li class="list-inline-item mb-2 mr-3">
-                                <img class="no-print" src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}" height="30" width="30">
+                                <img class="no-print" src="{{ interest.icon | relative_url }}" alt="{{ interest.name }}"
+                                    height="30" width="30">
                                 {{ interest.name }}
                                 <span class="sr-only">{{ interest.name }}</span>
                             </li>
@@ -356,7 +374,8 @@ layout: default
                             {% if portfolio.show_on_resume %}
                             <div class="col-6 col-md-4 p-2">
                                 <div class="card">
-                                    <img src="{{ portfolio.icon_image }}" alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top">
+                                    <img src="{{ portfolio.icon_image }}"
+                                        alt="{{ portfolio.title }} - {{ portfolio.subtitle }}" class="card-img-top">
                                     <div class="card-body p-2 text-center">
                                         <h3 class="h5">{{ portfolio.title }}</h3>
                                         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
@@ -389,7 +408,8 @@ layout: default
                         </a>
                         {%- endfor -%}
                         <div class="text-muted px-0 mt-4">
-                            <a href="{{ '/blog' | relative_url }}" class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
+                            <a href="{{ '/blog' | relative_url }}"
+                                class="btn bg-primary text-white btn-block rounded-pill no-print">SEE MORE</a>
                             <p class="text-center print mb-0">
                                 See More : https://magicjar.github.io/blog
                             </p>
