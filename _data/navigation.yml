@@ -1,9 +1,9 @@
-main-nav:
-  - page: Home
-    url: /
-  - page: Blog
-    url: /blog
-  - page: Projects
-    url: /portfolios
-  - page: Curiculum Vitae
-    url: /resume
+# Navigation data
+- page: Home
+  url: /
+- page: Blog
+  url: /blog
+- page: Projects
+  url: /portfolios
+- page: Curiculum Vitae
+  url: /resume
