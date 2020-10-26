@@ -159,6 +159,13 @@ blockquote {
     display: none;
 }
 
+#footer {
+    blockquote{
+        border-left: none;
+        background: inherit;
+    }
+}
+
 @media print {
     body {
         font-size: 14px;

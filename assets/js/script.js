@@ -31,3 +31,12 @@ $(document).on('click', 'a[href]', function (e) {
 
     $('body, html').animate({ scrollTop: pos }, 600);
 });
+
+$.getJSON('/assets/datas/quotes.json', (data) => {
+    var quotes = data;
+
+    var rndQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    $('#footer blockquote .quote').text(rndQuote.quote);
+    $('#footer blockquote .cite').text(rndQuote.author);
+});
