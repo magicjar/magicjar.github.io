@@ -2,7 +2,7 @@
 layout: post
 title: "Membuat Website Statis Cepat, Mudah, dan Gratis dengan Jekyll"
 date: 2020-06-02 05:04:14 +0700
-author: dawntale
+author: magicjar
 categories: jekyll blog
 tags: jekyll blog website gratis
 comments: true
