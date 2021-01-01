@@ -84,6 +84,12 @@ body {
     #hero {
         background: $hero-gradient-bg-light;
     }
+
+    article {
+        table {
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 body[dark-mode=true] {
