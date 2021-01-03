@@ -31,8 +31,7 @@ google_analytics_id:
 permalink: /blog/:year/:month/:title
 paginate: 2
 paginate_path: /blog/page:num/
-disqus:
-  shortname:
+disqus: magicjar
       
 # Homepage settings
 show_excerpts: true
