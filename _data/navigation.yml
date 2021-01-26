@@ -1,9 +1,13 @@
 # Navigation data
 - page: Home
   url: /
-- page: Blog
-  url: /blog
 - page: Projects
   url: /portfolios
 - page: Curiculum Vitae
   url: /resume
+- page: divider
+  url: /
+- page: Blog
+  url: /blog
+- page: Fun Stuff
+  url: /fun-stuff

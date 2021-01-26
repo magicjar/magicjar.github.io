@@ -1,0 +1,5 @@
+{% for i in (1..10) %}
+{% if i <= include.rating %} {% assign stars=stars | append: '&#9733;' %} {% else %} {% assign stars=stars |
+    append: '&#9734;' %} {% endif %} {% endfor %} <div class="mb-3" style="font-size: 1.5rem; color: gold">{{ stars
+    }} {{ include.rating }}/10</div>
+    {% assign stars='' %}

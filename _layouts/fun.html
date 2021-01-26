@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<!-- +++++ Fun Stuff +++++ -->
+<div id="main">
+
+    {%- include navigation.html -%}
+
+    <section class="container" id="showcase">
+        <h1 class="text-center mb-5">{{ page.title }}</h1>
+        <p class="mb-5">All the books I have read, all the movies I have watch, and all the musics I have listen to
+            outside Game
+            Development will be shared in here! Not all, most of it!</p>
+        {% assign sorted = site.fun | sort: 'date' | reverse %}
+        {% for item in sorted %}
+        <article class="row">
+            <div class="col-5 col-md-4 col-lg-3 my-auto"><img class="img-fluid" src="{{ item.image }}"
+                    alt="{{ item.title }}'s Image">
+            </div>
+            <div class="col-7 col-md-8 col-lg-9 my-auto">
+                <span>{{ item.date | date_to_string }}</span>
+                <h2 class="h4">{{ item.title }}</h2>
+                <p><span>{{ item.release_date | date: "%b %Y" }}</span> | <span>{{ item.author }}</span></p>
+                {% include star-rating.html rating=item.rating %}
+                {{ item.content }}
+            </div>
+        </article>
+        {% endfor %}
+    </section>
+</div>

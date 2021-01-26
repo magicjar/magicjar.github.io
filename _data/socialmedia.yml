@@ -19,6 +19,10 @@
   name: LinkedIn
   icon: social-logo-linkedin
   color_id: "#0077b5"
+# - url:
+#   name: Discord
+#   icon: social-logo-discord
+#   color_id: "#7289da"
 - url: mailto:fajarsetya@live.com
   name: E-mail
   icon: social-logo-mail
