@@ -3,7 +3,7 @@ title: "Harry Potter dan Batu Bertuah"
 author: "J.K. Rowling"
 date: 2020-02-01 00:00:01 +0700
 release_date: 2000-09-01 10:47:24 +0700
-rating: 8
+rating: 7
 image: /assets/images/2020/02/harry-potter-dan-batu-bertuah-cover.jpg
 
 category: book
