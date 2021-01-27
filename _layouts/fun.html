@@ -21,11 +21,18 @@ layout: default
                     <div class="col-8 col-md-7 col-lg-8 my-auto">
                         <span class="small">{{ item.date | date_to_string }}</span>
                         <h2 class="h4 mb-0"><b>{{ item.title }}</b></h2>
-                        <span>{{ item.release_date | date: "%b %Y" }} | <b>{{ item.author }}</b></span>
+                        <span><b>{{ item.category | capitalize }}</b> | {{ item.release_date | date: "%b %Y" }} |
+                            <b>{{ item.author }}</b></span>
                         {% include star-rating.html rating=item.rating %}
                         <div class="item-content" data-toggle="modal" data-target="#funModal"
                             data-item="{{ item.title | slugify }}">
                             {{ item.content }}
+                            <p>
+                                <b>Tags: </b>
+                                {% for tag in item.tags %}
+                                <span class="badge badge-primary mr-2">{{ tag }}</span>
+                                {% endfor %}
+                            </p>
                         </div>
                     </div>
                 </div>
