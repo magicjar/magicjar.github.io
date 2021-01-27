@@ -1,5 +1,5 @@
 ---
-title: "The Last Wish - The Witcher"
+title: "The Last Wish"
 author: "Andrzej Sapkowski"
 date: 2020-11-24 00:00:01 +0700
 release_date: 2008-05-01 10:47:24 +0700

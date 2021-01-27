@@ -6,25 +6,43 @@ layout: default
 
     {%- include navigation.html -%}
 
-    <section class="container" id="showcase">
+    <section class="container" id="fun">
         <h1 class="text-center mb-5">{{ page.title }}</h1>
         <p class="mb-5">All the books I have read, all the movies I have watch, and all the musics I have listen to
-            outside Game
-            Development will be shared in here! Not all, most of it!</p>
-        {% assign sorted = site.fun | sort: 'date' | reverse %}
-        {% for item in sorted %}
-        <article class="row">
-            <div class="col-5 col-md-4 col-lg-3 my-auto"><img class="img-fluid" src="{{ item.image }}"
-                    alt="{{ item.title }}'s Image">
-            </div>
-            <div class="col-7 col-md-8 col-lg-9 my-auto">
-                <span>{{ item.date | date_to_string }}</span>
-                <h2 class="h4">{{ item.title }}</h2>
-                <p><span>{{ item.release_date | date: "%b %Y" }}</span> | <span>{{ item.author }}</span></p>
-                {% include star-rating.html rating=item.rating %}
-                {{ item.content }}
-            </div>
-        </article>
-        {% endfor %}
+            outside Game Development will be shared in here! Not all, most of it!</p>
+        <div class="row">
+            {% assign sorted = site.fun | sort: 'date' | reverse %}
+            {% for item in sorted %}
+            <article class="col-12 col-md-6 item" id="{{ item.title | slugify }}">
+                <div class="row">
+                    <div class="item-image col-4 col-md-5 col-lg-4 my-auto"><img class="img-fluid"
+                            src="{{ item.image }}" alt="{{ item.title }}'s Image">
+                    </div>
+                    <div class="col-8 col-md-7 col-lg-8 my-auto">
+                        <span class="small">{{ item.date | date_to_string }}</span>
+                        <h2 class="h4 mb-0"><b>{{ item.title }}</b></h2>
+                        <span>{{ item.release_date | date: "%b %Y" }} | <b>{{ item.author }}</b></span>
+                        {% include star-rating.html rating=item.rating %}
+                        <div class="item-content" data-toggle="modal" data-target="#funModal"
+                            data-item="{{ item.title | slugify }}">
+                            {{ item.content }}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
     </section>
+
+    <div class="modal fade" id="funModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

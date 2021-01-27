@@ -46,7 +46,7 @@ $theme-colors: map-remove($theme-colors, "secondary", "success", "info", "warnin
 // @import "../node_modules/bootstrap/scss/list-group";
 // @import "../node_modules/bootstrap/scss/close";
 // @import "../node_modules/bootstrap/scss/toasts";
-// @import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/modal";
 // @import "../node_modules/bootstrap/scss/tooltip";
 // @import "../node_modules/bootstrap/scss/popover";
 // @import "../node_modules/bootstrap/scss/carousel";
@@ -96,6 +96,10 @@ body {
             }
         }
     }
+
+    .modal-content {
+        background-color: $main-background-light;
+    }
 }
 
 body[dark-mode=true] {
@@ -117,6 +121,14 @@ body[dark-mode=true] {
     .portfolio-action {
         color: $main-background-dark !important;
         background-color: $main-color-dark;
+    }
+
+    .modal-content {
+        background-color: $main-background-dark;
+
+        .modal-footer {
+            border-top-color: #232323;
+        }
     }
 }
 
@@ -284,6 +296,32 @@ blockquote {
     }
 }
 // End NAVBAR
+
+// Start Fun Stuff Section
+#fun {
+    .item {
+        margin-bottom: 2em;
+    }
+
+    .item-content {
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#funModal {
+    .item-image {
+        margin-top: 0 !important;
+    }
+}
+// End Fun Stuff
 
 // Start CV
 #cv {
