@@ -3,4 +3,5 @@ _site
 .jekyll-metadata
 .vs-code
 Gemfile.lock
-node_modules
+node_modules/**
+!node_modules/bootstrap
