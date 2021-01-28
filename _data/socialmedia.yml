@@ -1,29 +1,22 @@
 # Social media
 - url: https://magicjar.github.com
   name: Github
-  icon: social-logo-github
-  color_id: "#24292e"
+  icon: /assets/icons/social/github.svg
 # - url: https://facebook.com/
 #   name: Facebook
-#   icon: social-logo-facebook
-#   color_id: "#3b5998"
+#   icon: /assets/icons/social/facebook.svg
 # - url: https://twitter.com/thedawntale
 #   name: Twitter
-#   icon: social-logo-twitter
-#   color_id: "#1da1f2"
+#   icon: /assets/icons/social/twitter.svg
 # - url: https://instagram.com/pkg.jar
 #   name: Instagram
-#   icon: social-logo-instagram
-#   color_id: "#ef4957"
+#   icon: /assets/icons/social/instagram.svg
 - url: https://linkedin.com/in/fajarsetya
   name: LinkedIn
-  icon: social-logo-linkedin
-  color_id: "#0077b5"
-# - url:
+  icon: /assets/icons/social/linkedin.svg
+# - url: "#"
 #   name: Discord
-#   icon: social-logo-discord
-#   color_id: "#7289da"
+#   icon: /assets/icons/social/discord.svg
 - url: mailto:fajarsetya@live.com
   name: E-mail
-  icon: social-logo-mail
-  color_id: "#24292e"
+  icon: /assets/icons/social/email.svg
