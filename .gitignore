@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 .vs-code
 Gemfile.lock
+node_modules

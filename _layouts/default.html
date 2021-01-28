@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Fajar Setya Budi">
 
-    {% seo %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fajar Setya Budi">
 
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    {%- include assets.html -%}
-  
-  </head>
-  <body>
+  {% seo %}
 
-    {{ content }}
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    {%- include footer.html -%}
+  {%- include assets.html -%}
 
-    {% if jekyll.environment == "production" %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    {% else %}
-    <script src="{{ '/assets/js/jquery.min.js' | relative_url  }}"></script>
-    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-    {% endif %}
-    <script src="{{ '/assets/js/script.js' | relative_url  }}"></script>
+</head>
 
-    {% if site.google_analytics_id %}
-    {%- include google_analytics.html -%}
-    {% endif %}
-  </body>
+<body>
+
+  {{ content }}
+
+  {%- include footer.html -%}
+
+  {% if jekyll.environment == "production" %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  {% else %}
+  <script src="{{ '/assets/js/jquery.min.js' | relative_url  }}"></script>
+  <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/isotope.pkgd.min.js' }}"></script>
+  {% endif %}
+  <script src="{{ '/assets/js/script.js' | relative_url  }}"></script>
+
+  {% if site.google_analytics_id %}
+  {%- include google_analytics.html -%}
+  {% endif %}
+</body>
+
 </html>

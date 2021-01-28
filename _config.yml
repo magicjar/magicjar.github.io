@@ -62,17 +62,14 @@ sass:
   sass_dir: _sass
   style: compressed
 
-include:
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
   - node_modules
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - package-lock.json
+  - package.json
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

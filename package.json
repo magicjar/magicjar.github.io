@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "postinstall": "npm run copy-bootstrap && npm run copy-jquery && npm run copy-isotope",
+    "copy-bootstrap": "shx cp -r node_modules/bootstrap/dist/js/bootstrap.min*{js,map} assets/js",
+    "copy-jquery": "shx cp -r node_modules/jquery/dist/jquery.min*{js,map} assets/js",
+    "copy-isotope": "shx cp -r node_modules/isotope-layout/dist/isotope.pkgd.min*{js,map} assets/js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.5.1",
+    "shx": "^0.3.3"
+  }
+}
