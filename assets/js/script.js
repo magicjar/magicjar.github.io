@@ -32,6 +32,16 @@ $(document).on('click', 'a[href]', function (e) {
     $('body, html').animate({ scrollTop: pos }, 600);
 });
 
+var $grid = $('.fun-grid').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows'
+});
+
+$('.filter-fun-stuff input[type="radio"]').on('change', function (e) {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+});
+
 $('#funModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget)
     var id = button.data('item')
