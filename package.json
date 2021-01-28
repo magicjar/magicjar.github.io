@@ -1,7 +1,7 @@
 {
   "scripts": {
     "postinstall": "npm run copy-bootstrap && npm run copy-jquery && npm run copy-isotope",
-    "copy-bootstrap": "shx cp -r node_modules/bootstrap/dist/js/bootstrap.min*{js,map} assets/js",
+    "copy-bootstrap": "shx cp -r node_modules/bootstrap/scss* _sass/bootstrap && shx cp -r node_modules/bootstrap/dist/js/bootstrap.min*{js,map} assets/js",
     "copy-jquery": "shx cp -r node_modules/jquery/dist/jquery.min*{js,map} assets/js",
     "copy-isotope": "shx cp -r node_modules/isotope-layout/dist/isotope.pkgd.min*{js,map} assets/js"
   },

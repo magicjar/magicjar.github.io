@@ -62,9 +62,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-include:
-  - node_modules/bootstrap
-
 # Exclude from processing
 exclude:
   - Gemfile
