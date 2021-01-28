@@ -38,7 +38,7 @@ show_excerpts: true
 post_limit: 3
 
 # Additional pages
-show_blog: true
+show_blog: false
 show_portfolio: true
 show_resume: true
 
