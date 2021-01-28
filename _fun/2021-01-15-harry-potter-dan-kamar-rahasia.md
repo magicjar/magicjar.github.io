@@ -2,7 +2,7 @@
 title: "Harry Potter dan Kamar Rahasia"
 author: "J.K. Rowling"
 date: 2021-01-15 00:00:01 +0700
-release_date: 2000-09-01 10:47:24 +0700
+release_date: 2000-11-01 10:47:24 +0700
 rating: 8
 image: /assets/images/2021/01/harry-potter-dan-kamar-rahasia-cover.jpg
 
