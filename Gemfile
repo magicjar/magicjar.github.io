@@ -32,4 +32,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm" if Gem.win_platform?
 
 # Fix build error when using Ruby3
-# gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.7"
