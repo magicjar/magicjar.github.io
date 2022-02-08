@@ -75,6 +75,15 @@ layout: default
                             </li>
                             {%- endif -%}
 
+                            {%- if site.data.resume.award-certificate.show -%}
+                            <li class="list-inline-item mr-0 d-block">
+                                <a title="Certificates" href="#cert">
+                                    <img src="{{ '/assets/icons/023-certificate.svg' | relative_url }}" alt="Certificates's Icon" height="25" width="25">
+                                    <span class="sr-only">Certificates</span>
+                                </a>
+                            </li>
+                            {%- endif -%}
+
                             {%- if site.data.resume.reference.show -%}
                             <li class="list-inline-item mr-0 d-block">
                                 <a title="Reference" href="#reference">
@@ -311,6 +320,34 @@ layout: default
                         {%- endif -%}
                     </div>
                     {%- endif -%}
+                </div>
+                {%- endif -%}
+
+                {%- if site.data.resume.award-certificate.show -%}
+                <div class="card cv-card" id="cert">
+                    <div class="card-body p-4">
+                        <h2 class="h4 font-weight-bold text-uppercase">Certificates</h2>
+                        <table>
+                            <tbody>
+                                {%- for cert in site.data.resume.award-certificate.lists -%}
+                                <tr>
+                                    <td class="edu-year text-center text-white align-middle text-nowrap">
+                                        {{ cert.issue_date }}</td>
+                                    <td>
+                                        <h3 class="h5">{{ cert.title }} {% if cert.link %}- <a href="{{cert.link}}"><small>View
+                                        Certificate</small></a>{% endif %}</h3>
+                                        {%- if cert.authority -%}
+                                        <strong>{{ cert.authority }}</strong>
+                                        {%- endif -%}
+                                        {%- if cert.description -%}
+                                        <p>{{ cert.description }}</p>
+                                        {%- endif -%}
+                                    </td>
+                                </tr>
+                                {%- endfor -%}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 {%- endif -%}
 

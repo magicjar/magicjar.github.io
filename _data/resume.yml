@@ -2,13 +2,13 @@
 name: Fajar Setya Budi
 greetings: Hello, I'm Fajar!
 introduction: >-
-  A creative and dynamic game developer with 3 years of experiences in making games. 
+  A creative and dynamic game developer with 5 years of experiences in making games. 
   I am excellent in working with team or solo to achieve targets on time and capable 
   of turning your imagination into a playable game.
 picture: /assets/images/pp.jpg
 picture_big: /assets/images/DSC_0523.jpg
 occupation: Game Developer
-last_update: 08 September 2020
+last_update: 08 February 2022
 
 personalinfo:
   show: true
@@ -58,6 +58,8 @@ skills:
       skill:
       - name: C#
         stats: 80
+      - name: ASP.NET (MVC, Razor, Blazor)
+        stats: 65
       - name: HTML
         stats: 90
       - name: CSS
@@ -69,13 +71,13 @@ skills:
     - category: Others
       skill:
       - name: GIT
-        stats: 70
+        stats: 75
       - name: Photoshop
-        stats: 80
+        stats: 85
       - name: Corel Draw
         stats: 85
       - name: blender
-        stats: 60
+        stats: 70
       - name: Microsoft Office
         stats: 90
 
@@ -150,11 +152,14 @@ event:
     orgarizer:
 
 award-certificate:
-  show: false
+  show: true
   lists:
-  - title:
-    authority:
+  - title: Google Play Academy Study Jam - Store Listing Workshop
+    authority: Google Play Academy
     description:
+    link: assets/docs/Google_Play_Academy_Study_Jam_Store_Listing_Workshop_Certificate.pdf
+    issue_date: 28/12/2021
+    expired_date:
 
 interest:
   show: true
