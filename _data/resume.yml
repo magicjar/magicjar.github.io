@@ -58,7 +58,7 @@ skills:
       skill:
       - name: C#
         stats: 80
-      - name: ASP.NET (MVC, Razor, Blazor)
+      - name: ASP.NET (Full stack)
         stats: 65
       - name: HTML
         stats: 90
@@ -85,7 +85,7 @@ experience:
   show: true
   lists:
   - job: Solo Game Developer
-    active: 2017 - Now
+    active: 2017 - Present
     company:
     - name: Storming Area 15
       job_description: >-
