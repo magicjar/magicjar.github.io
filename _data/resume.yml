@@ -8,7 +8,7 @@ introduction: >-
 picture: /assets/images/pp.jpg
 picture_big: /assets/images/DSC_0523.jpg
 occupation: Game Developer
-last_update: 08 February 2022
+last_update: 19 March 2022
 
 personalinfo:
   show: true
@@ -58,8 +58,8 @@ skills:
       skill:
       - name: C#
         stats: 80
-      - name: ASP.NET (Full stack)
-        stats: 65
+      - name: ASP.NET
+        stats: 70
       - name: HTML
         stats: 90
       - name: CSS
@@ -87,6 +87,16 @@ experience:
   - job: Solo Game Developer
     active: 2017 - Present
     company:
+    - name: Crazy Pedicab Driver
+      job_description: >-
+        Pick your pedicab and drive it like crazy through the endless roads of traffic, earn cash, upgrade, customize, and collect all of the pedicab.
+    - name: Animal Drifter
+      job_description: >-
+        Hurry up! Your kids are hungry and you have to find food before times run out.
+        Try to slide when you turn to get drift points, but don’t be cocky because if you hit the wall too hard, you will either lose your drift points or even died. You can use your skill to help you complete the level.
+    - name: The Shape?
+      job_description: >-
+        Use your brain to match your shape with hole shape on the wall before you hit it. Upgrade your “Power Up” to help you in this fun and brain sharpening game.
     - name: Storming Area 15
       job_description: >-
         Play as an alien who want to rescue their friends from humans.
