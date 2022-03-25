@@ -335,7 +335,7 @@ layout: default
                                     <td class="edu-year text-center text-white align-middle text-nowrap">
                                         {{ cert.issue_date }}</td>
                                     <td>
-                                        <h3 class="h5">{{ cert.title }} {% if cert.link %}- <a href="{{cert.link}}"><small>View
+                                        <h3 class="h5">{{ cert.title }} {% if cert.link %}- <a href="{{cert.link}}" target="_blank"><small>View
                                         Certificate</small></a>{% endif %}</h3>
                                         {%- if cert.authority -%}
                                         <strong>{{ cert.authority }}</strong>
