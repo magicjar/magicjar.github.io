@@ -170,6 +170,12 @@ award-certificate:
     link: assets/docs/Google_Play_Academy_Study_Jam_Store_Listing_Workshop_Certificate.pdf
     issue_date: 28/12/2021
     expired_date:
+  - title: C# (Basic) Certificate
+    authority: HackerRank
+    description: Understanding the structure of C# programs, types, and Variables, basic OOP, Properties and Indexers, Collections, Exception handling, among others.
+    link: https://www.hackerrank.com/certificates/8e7f755445e9
+    issue_date: 22/03/2022
+    expired_date:
 
 interest:
   show: true
