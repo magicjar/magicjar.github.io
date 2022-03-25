@@ -176,6 +176,12 @@ award-certificate:
     link: https://www.hackerrank.com/certificates/8e7f755445e9
     issue_date: 22/03/2022
     expired_date:
+  - title: CSS Certificate
+    authority: HackerRank
+    description: Covers topics like exploring Cascading and Inheritance, exploring text styling fundamentals, understanding the use of layouts in CSS, understand the boxing of elements in CSS, among others.
+    link: https://www.hackerrank.com/certificates/ec872f16ba56
+    issue_date: 22/03/2022
+    expired_date:
 
 interest:
   show: true
